@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>owner</key>
+		<string>Brian Watkins</string>
+		<key>text</key>
+		<string>My favorite video game is Galaga! It&apos;s really fun to play. You should try it!</string>
+		<key>date</key>
+		<string>August 21, 2013</string>
+	</dict>
+	<dict>
+		<key>owner</key>
+		<string>Brian Watkins</string>
+		<key>text</key>
+		<string>I read a really good book recently. It&apos;s called Infinite Jest by David Foster Wallace. It&apos;s really long!</string>
+		<key>date</key>
+		<string>August 20, 2013</string>
+	</dict>
+	<dict>
+		<key>owner</key>
+		<string>Brian Watkins</string>
+		<key>text</key>
+		<string>Here are some pictures of the food I&apos;ve eaten recently!</string>
+		<key>date</key>
+		<string>August 8, 2013</string>
+	</dict>
+	<dict>
+		<key>owner</key>
+		<string>Brian Watkins</string>
+		<key>text</key>
+		<string>Another fun post!</string>
+		<key>date</key>
+		<string>August 8, 2013</string>
+	</dict>
+	<dict>
+		<key>owner</key>
+		<string>Brian Watkins</string>
+		<key>text</key>
+		<string>Here is my first post!</string>
+		<key>date</key>
+		<string>August 9, 2013</string>
+	</dict>
+</array>
+</plist>

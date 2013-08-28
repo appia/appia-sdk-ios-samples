@@ -21,6 +21,12 @@
 		414297D217CE8104005776AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414297B417CE8104005776AB /* UIKit.framework */; };
 		414297DA17CE8104005776AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 414297D817CE8104005776AB /* InfoPlist.strings */; };
 		414297DC17CE8104005776AB /* AppiaPopupSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 414297DB17CE8104005776AB /* AppiaPopupSampleTests.m */; };
+		414297E717CE8A99005776AB /* APPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 414297E617CE8A99005776AB /* APPostCell.m */; };
+		414297EA17CE8ABF005776AB /* APPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 414297E917CE8ABF005776AB /* APPost.m */; };
+		414297ED17CE8B98005776AB /* APPostFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 414297EC17CE8B98005776AB /* APPostFactory.m */; };
+		414297EF17CE904A005776AB /* postData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 414297EE17CE904A005776AB /* postData.plist */; };
+		414297F217CE9DC8005776AB /* APPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 414297F117CE9DC8005776AB /* APPostViewController.m */; };
+		414297F617CE9F13005776AB /* APPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 414297F517CE9F13005776AB /* APPostView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,17 @@
 		414297D717CE8104005776AB /* AppiaPopupSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppiaPopupSampleTests-Info.plist"; sourceTree = "<group>"; };
 		414297D917CE8104005776AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		414297DB17CE8104005776AB /* AppiaPopupSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppiaPopupSampleTests.m; sourceTree = "<group>"; };
+		414297E517CE8A99005776AB /* APPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPostCell.h; sourceTree = "<group>"; };
+		414297E617CE8A99005776AB /* APPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPostCell.m; sourceTree = "<group>"; };
+		414297E817CE8ABF005776AB /* APPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPost.h; sourceTree = "<group>"; };
+		414297E917CE8ABF005776AB /* APPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPost.m; sourceTree = "<group>"; };
+		414297EB17CE8B98005776AB /* APPostFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPostFactory.h; sourceTree = "<group>"; };
+		414297EC17CE8B98005776AB /* APPostFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPostFactory.m; sourceTree = "<group>"; };
+		414297EE17CE904A005776AB /* postData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = postData.plist; sourceTree = "<group>"; };
+		414297F017CE9DC8005776AB /* APPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPostViewController.h; sourceTree = "<group>"; };
+		414297F117CE9DC8005776AB /* APPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPostViewController.m; sourceTree = "<group>"; };
+		414297F417CE9F13005776AB /* APPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPostView.h; sourceTree = "<group>"; };
+		414297F517CE9F13005776AB /* APPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPostView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +134,16 @@
 				414297C217CE8104005776AB /* Main.storyboard */,
 				414297C517CE8104005776AB /* APViewController.h */,
 				414297C617CE8104005776AB /* APViewController.m */,
+				414297F017CE9DC8005776AB /* APPostViewController.h */,
+				414297F117CE9DC8005776AB /* APPostViewController.m */,
+				414297EB17CE8B98005776AB /* APPostFactory.h */,
+				414297EC17CE8B98005776AB /* APPostFactory.m */,
+				414297E817CE8ABF005776AB /* APPost.h */,
+				414297E917CE8ABF005776AB /* APPost.m */,
+				414297F417CE9F13005776AB /* APPostView.h */,
+				414297F517CE9F13005776AB /* APPostView.m */,
+				414297E517CE8A99005776AB /* APPostCell.h */,
+				414297E617CE8A99005776AB /* APPostCell.m */,
 				414297C817CE8104005776AB /* Images.xcassets */,
 				414297B717CE8104005776AB /* Supporting Files */,
 			);
@@ -130,6 +157,7 @@
 				414297B917CE8104005776AB /* InfoPlist.strings */,
 				414297BC17CE8104005776AB /* main.m */,
 				414297BE17CE8104005776AB /* AppiaPopupSample-Prefix.pch */,
+				414297EE17CE904A005776AB /* postData.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -229,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414297EF17CE904A005776AB /* postData.plist in Resources */,
 				414297C917CE8104005776AB /* Images.xcassets in Resources */,
 				414297BB17CE8104005776AB /* InfoPlist.strings in Resources */,
 				414297C417CE8104005776AB /* Main.storyboard in Resources */,
@@ -250,9 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414297F217CE9DC8005776AB /* APPostViewController.m in Sources */,
+				414297F617CE9F13005776AB /* APPostView.m in Sources */,
 				414297BD17CE8104005776AB /* main.m in Sources */,
 				414297C717CE8104005776AB /* APViewController.m in Sources */,
+				414297E717CE8A99005776AB /* APPostCell.m in Sources */,
 				414297C117CE8104005776AB /* APAppDelegate.m in Sources */,
+				414297EA17CE8ABF005776AB /* APPost.m in Sources */,
+				414297ED17CE8B98005776AB /* APPostFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

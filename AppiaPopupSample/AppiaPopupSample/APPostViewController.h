@@ -1,5 +1,5 @@
 //
-//  APViewController.h
+//  APPostViewController.h
 //  AppiaPopupSample
 //
 //  Created by Brian Watkins on 8/28/13.
@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class APPost;
 
-@interface APViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface APPostViewController : UIViewController
+
+@property (nonatomic,strong) APPost *post;
 
 @end
