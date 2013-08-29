@@ -16,6 +16,7 @@
 {
     NSArray *posts;
     NSIndexPath *selectedPostIndex;
+    UITableView *postTable;
 }
 
 @end
@@ -32,17 +33,46 @@
     APPostFactory *postFactory = [[APPostFactory alloc] initWithPostFile:postFile];
     posts = [postFactory posts];
     
-    [[self view] setBackgroundColor:[UIColor colorWithWhite:0.3 alpha:1.0]];
+    [[self view] setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
     
-    [[[self navigationController] navigationBar] setBarTintColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
-    [[[self navigationController] navigationBar] setTranslucent:NO];
+    //for iOS 7
+    //[[[self navigationController] navigationBar] setBarTintColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
+    //[[[self navigationController] navigationBar] setTranslucent:NO];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, self.view.frame.size.height - 64.0) style:UITableViewStylePlain];
-    [tableView setDataSource:self];
-    [tableView setDelegate:self];
-    [tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [tableView setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
-    [[self view] addSubview:tableView];
+    postTable = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, self.view.frame.size.height - 44.0) style:UITableViewStylePlain];
+    [postTable setDataSource:self];
+    [postTable setDelegate:self];
+    [postTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [postTable setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
+    [[self view] addSubview:postTable];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if (![self.slidingViewController.underLeftViewController isKindOfClass:NSClassFromString(@"APMenuViewController")])
+    {
+	    self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+    }
+    
+    [self.slidingViewController.panGesture setEnabled:YES];
+    [self.navigationController.view addGestureRecognizer:self.slidingViewController.panGesture];
+
+    self.navigationController.view.layer.shadowOpacity = 0.75f;
+    self.navigationController.view.layer.shadowRadius = 10.0f;
+    self.navigationController.view.layer.shadowColor = [UIColor blackColor].CGColor;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (selectedPostIndex)
+    {
+        [postTable deselectRowAtIndexPath:selectedPostIndex animated:YES];
+        selectedPostIndex = nil;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,9 +83,17 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    //turn off the gesture recognizer
+    [self.slidingViewController.panGesture setEnabled:NO];
+    
     //present the view controller for viewing a post
     APPostViewController *postVC = [segue destinationViewController];
     [postVC setPost:[posts objectAtIndex:[selectedPostIndex row]]];
+}
+
+- (IBAction)showMenu:(id)sender
+{
+    [self.slidingViewController anchorTopViewTo:ECRight];
 }
 
 #pragma mark - TableViewDataSource methods
@@ -67,7 +105,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 125.0;
+    return [[posts objectAtIndex:indexPath.row] heightForPost];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

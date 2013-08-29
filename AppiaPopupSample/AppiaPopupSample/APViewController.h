@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ECSlidingViewController.h"
 
 @interface APViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+
+- (IBAction)showMenu:(id)sender;
 
 @end

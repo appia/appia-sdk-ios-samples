@@ -2,17 +2,26 @@
 //  APAppDelegate.m
 //  AppiaPopupSample
 //
-//  Created by Brian Watkins on 8/28/13.
+//  Created by Brian Watkins on 8/29/13.
 //  Copyright (c) 2013 Appia, Inc. All rights reserved.
 //
 
 #import "APAppDelegate.h"
+#import "ECSlidingViewController.h"
 
 @implementation APAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    ECSlidingViewController *slidingVC = (ECSlidingViewController *)self.window.rootViewController;
+    
+    UIViewController *topVC = [slidingVC.storyboard instantiateViewControllerWithIdentifier:@"postList"];
+    
+    [slidingVC setTopViewController:topVC];
+    [slidingVC setResetStrategy:ECPanning|ECTapping];
+    [slidingVC setAnchorRightPeekAmount:125.0];
+    
     return YES;
 }
 							

@@ -13,6 +13,7 @@
 @interface APPostViewController ()
 {
     APPostView *postView;
+    UIScrollView *scrollView;
 }
 @end
 
@@ -34,15 +35,23 @@
     
     [[self view] setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
     
-    postView = [[APPostView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 400.0)];
-    [[self view] addSubview:postView];
+    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height - 44.0)];
+    [[self view] addSubview:scrollView];
+    
+    postView = [[APPostView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 300.0)];
+    [scrollView addSubview:postView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
+    CGRect f = postView.frame;
+    [postView setFrame:CGRectMake(f.origin.x, f.origin.y, f.size.width, [[self post] heightForPostWithComments])];
     [postView setPost:[self post]];
+    [postView setCommentsVisible:YES];
+    
+    [scrollView setContentSize:CGSizeMake(postView.frame.size.width, postView.frame.size.height)];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,6 +8,7 @@
 
 #import "APPostFactory.h"
 #import "APPost.h"
+#import "APComment.h"
 
 @interface APPostFactory ()
 
@@ -52,10 +53,33 @@
         [post setOwner:[properties objectForKey:@"owner"]];
         [post setText:[properties objectForKey:@"text"]];
         [post setDate:[properties objectForKey:@"date"]];
+        
+        NSArray *comments = [self commentsFromProperties:[properties objectForKey:@"comments"]];
+        
+        [post setComments:comments];
+        
+        [post setPhotos:[properties objectForKey:@"photos"]];
+        
         [posts addObject:post];
     }
     
     return posts;
+}
+
+- (NSArray *)commentsFromProperties:(NSArray *)properties
+{
+    NSMutableArray *comments = [[NSMutableArray alloc] initWithCapacity:[properties count]];
+    
+    for (NSDictionary *dict in properties)
+    {
+        APComment *comment = [[APComment alloc] init];
+        [comment setText:[dict objectForKey:@"text"]];
+        [comment setDate:[dict objectForKey:@"date"]];
+        [comment setOwner:[dict objectForKey:@"owner"]];
+        [comments addObject:comment];
+    }
+    
+    return comments;
 }
 
 @end

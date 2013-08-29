@@ -13,5 +13,10 @@
 @property (nonatomic,strong) NSString *owner;
 @property (nonatomic,strong) NSString *text;
 @property (nonatomic,strong) NSString *date;
+@property (nonatomic,strong) NSArray *comments;
+@property (nonatomic,strong) NSArray *photos;
+
+- (CGFloat)heightForPost;
+- (CGFloat)heightForPostWithComments;
 
 @end

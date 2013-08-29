@@ -1,5 +1,5 @@
 //
-//  APAppDelegate.h
+//  APCommentView.h
 //  AppiaPopupSample
 //
 //  Created by Brian Watkins on 8/29/13.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class APComment;
 
-@interface APAppDelegate : UIResponder <UIApplicationDelegate>
+@interface APCommentView : UIView
 
-@property (strong, nonatomic) UIWindow *window;
+- (void)setComment:(APComment *)comment;
 
 @end

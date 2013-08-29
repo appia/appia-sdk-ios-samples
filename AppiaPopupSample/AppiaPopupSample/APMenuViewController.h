@@ -1,5 +1,5 @@
 //
-//  APAppDelegate.h
+//  APMenuViewController.h
 //  AppiaPopupSample
 //
 //  Created by Brian Watkins on 8/29/13.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "APMenuViewDelegate.h"
 
-@interface APAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface APMenuViewController : UIViewController <APMenuViewDelegate>
 
 @end

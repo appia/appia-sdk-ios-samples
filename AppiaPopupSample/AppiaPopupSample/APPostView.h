@@ -13,4 +13,8 @@
 
 - (void)setPost:(APPost *)post;
 
+- (void)setPostBackgroundColor:(UIColor *)color;
+
+- (void)setCommentsVisible:(BOOL)visible;
+
 @end

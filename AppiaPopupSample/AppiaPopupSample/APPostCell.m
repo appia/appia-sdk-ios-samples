@@ -13,6 +13,7 @@
 @interface APPostCell ()
 {
     APPostView *postView;
+    UIColor *highlightColor, *normalColor;
 }
 
 
@@ -30,7 +31,11 @@
         
         [[self contentView] setBackgroundColor:[UIColor clearColor]];
         
-        postView = [[APPostView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, 125.0)];
+        normalColor = [UIColor whiteColor];
+        highlightColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+        
+        postView = [[APPostView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)];
+        [postView setPostBackgroundColor:normalColor];
         [[self contentView] addSubview:postView];
     }
     return self;
@@ -41,6 +46,19 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    [UIView animateWithDuration:(animated ? 0.2 : 0.0) delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [postView setPostBackgroundColor:(selected ? highlightColor : normalColor)];
+    } completion:NULL];
+}
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    [super setHighlighted:highlighted animated:animated];
+    
+    // Configure the view for the selected state
+    [UIView animateWithDuration:(animated ? 0.2 : 0.0) delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [postView setPostBackgroundColor:(highlighted ? highlightColor : normalColor)];
+    } completion:NULL];
 }
 
 - (void)setPost:(APPost *)post
