@@ -35,6 +35,9 @@
 		41A31C1817CFD66100E0887A /* photo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A31C1517CFD66100E0887A /* photo_2.png */; };
 		41A31C1917CFD66100E0887A /* photo_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 41A31C1617CFD66100E0887A /* photo_3.png */; };
 		41A31C1D17CFE78800E0887A /* APMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A31C1C17CFE78800E0887A /* APMenuView.m */; };
+		41BF550117D0D6B000F673FB /* APImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BF550017D0D6B000F673FB /* APImageView.m */; };
+		41BF550517D0DB6300F673FB /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BF550317D0DB6300F673FB /* add_button.png */; };
+		41BF550617D0DB6300F673FB /* add_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41BF550417D0DB6300F673FB /* add_button@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +86,12 @@
 		41A31C1B17CFE78800E0887A /* APMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMenuView.h; sourceTree = "<group>"; };
 		41A31C1C17CFE78800E0887A /* APMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APMenuView.m; sourceTree = "<group>"; };
 		41A31C1E17CFE97100E0887A /* APMenuViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMenuViewDelegate.h; sourceTree = "<group>"; };
+		41BF54FF17D0D6B000F673FB /* APImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APImageView.h; sourceTree = "<group>"; };
+		41BF550017D0D6B000F673FB /* APImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APImageView.m; sourceTree = "<group>"; };
+		41BF550317D0DB6300F673FB /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
+		41BF550417D0DB6300F673FB /* add_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_button@2x.png"; sourceTree = "<group>"; };
+		41BF550717D0E7E700F673FB /* APPostViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPostViewDelegate.h; sourceTree = "<group>"; };
+		41BF550817D0E90B00F673FB /* APPostCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPostCellDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,16 +147,20 @@
 				41A31C1B17CFE78800E0887A /* APMenuView.h */,
 				41A31C1C17CFE78800E0887A /* APMenuView.m */,
 				41A31C1E17CFE97100E0887A /* APMenuViewDelegate.h */,
+				41A31BEA17CF9BC500E0887A /* APPostFactory.h */,
+				41A31BEB17CF9BC500E0887A /* APPostFactory.m */,
 				41A31BE617CF9BC500E0887A /* APPost.h */,
 				41A31BE717CF9BC500E0887A /* APPost.m */,
 				41A31C1117CFC47600E0887A /* APComment.h */,
 				41A31C1217CFC47600E0887A /* APComment.m */,
 				41A31BE817CF9BC500E0887A /* APPostCell.h */,
 				41A31BE917CF9BC500E0887A /* APPostCell.m */,
-				41A31BEA17CF9BC500E0887A /* APPostFactory.h */,
-				41A31BEB17CF9BC500E0887A /* APPostFactory.m */,
+				41BF550817D0E90B00F673FB /* APPostCellDelegate.h */,
 				41A31BEC17CF9BC500E0887A /* APPostView.h */,
 				41A31BED17CF9BC500E0887A /* APPostView.m */,
+				41BF550717D0E7E700F673FB /* APPostViewDelegate.h */,
+				41BF54FF17D0D6B000F673FB /* APImageView.h */,
+				41BF550017D0D6B000F673FB /* APImageView.m */,
 				41A31C0E17CFC45200E0887A /* APCommentView.h */,
 				41A31C0F17CFC45200E0887A /* APCommentView.m */,
 				41A31BEE17CF9BC500E0887A /* APPostViewController.h */,
@@ -178,6 +191,8 @@
 		41A31C0317CF9C1B00E0887A /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				41BF550317D0DB6300F673FB /* add_button.png */,
+				41BF550417D0DB6300F673FB /* add_button@2x.png */,
 				41A31C1417CFD66100E0887A /* photo_1.png */,
 				41A31C1517CFD66100E0887A /* photo_2.png */,
 				41A31C1617CFD66100E0887A /* photo_3.png */,
@@ -261,6 +276,8 @@
 				41A31C1717CFD66100E0887A /* photo_1.png in Resources */,
 				41A31C1817CFD66100E0887A /* photo_2.png in Resources */,
 				41A31C1917CFD66100E0887A /* photo_3.png in Resources */,
+				41BF550517D0DB6300F673FB /* add_button.png in Resources */,
+				41BF550617D0DB6300F673FB /* add_button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +302,7 @@
 				41A31C1017CFC45200E0887A /* APCommentView.m in Sources */,
 				41A31C1317CFC47600E0887A /* APComment.m in Sources */,
 				41A31C1D17CFE78800E0887A /* APMenuView.m in Sources */,
+				41BF550117D0D6B000F673FB /* APImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +425,7 @@
 				41A31BE317CF9B8100E0887A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

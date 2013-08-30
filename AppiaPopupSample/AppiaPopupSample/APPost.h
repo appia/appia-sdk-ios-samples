@@ -11,6 +11,7 @@
 @interface APPost : NSObject
 
 @property (nonatomic,strong) NSString *owner;
+@property (nonatomic,strong) NSString *picture;
 @property (nonatomic,strong) NSString *text;
 @property (nonatomic,strong) NSString *date;
 @property (nonatomic,strong) NSArray *comments;
@@ -18,5 +19,7 @@
 
 - (CGFloat)heightForPost;
 - (CGFloat)heightForPostWithComments;
+
+- (UIImage *)pictureImage;
 
 @end

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ECSlidingViewController.h"
+#import "APPostCellDelegate.h"
 
-@interface APViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface APViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,APPostCellDelegate>
 
 - (IBAction)showMenu:(id)sender;
 

@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 @class APPost;
+@class APImageView;
 
 @interface APPostViewController : UIViewController
 
 @property (nonatomic,strong) APPost *post;
+@property (nonatomic,strong) APImageView *selectedPhoto;
 
 @end

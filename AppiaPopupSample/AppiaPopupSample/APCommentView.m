@@ -11,7 +11,8 @@
 
 @interface APCommentView ()
 {
-    UILabel *ownerLabel, *textLabel, *dateLabel;
+    UILabel *ownerLabel, *textLabel, *dateLabel, *noCommentLabel;
+    UIImageView *faceView;
 }
 
 @end
@@ -30,7 +31,7 @@
         
         CGFloat xOffset = 40.0;
         
-        UIView *faceView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 8.0, 20.0, 20.0)];
+        faceView = [[UIImageView alloc] initWithFrame:CGRectMake(10.0, 8.0, 20.0, 20.0)];
         [faceView setBackgroundColor:[UIColor colorWithWhite:0.3 alpha:1.0]];
         [self addSubview:faceView];
         
@@ -55,16 +56,35 @@
         [dateLabel setTextColor:[UIColor colorWithWhite:0.5 alpha:1.0]];
         [self addSubview:dateLabel];
         
+        noCommentLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, self.frame.size.width - 20.0, self.frame.size.height)];
+        [noCommentLabel setBackgroundColor:[UIColor clearColor]];
+        [noCommentLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:13.0]];
+        [noCommentLabel setTextColor:[UIColor colorWithWhite:0.2 alpha:1.0]];
+        [self addSubview:noCommentLabel];
     }
     return self;
 }
 
 - (void)setComment:(APComment *)comment
 {
-    [ownerLabel setText:comment.owner];
-    [dateLabel setText:comment.date];
-    [textLabel setText:comment.text];
-    [textLabel sizeToFit];
+    if (comment)
+    {
+        [ownerLabel setText:comment.owner];
+        [faceView setImage:[comment pictureImage]];
+        [dateLabel setText:comment.date];
+        [textLabel setText:comment.text];
+        [textLabel sizeToFit];
+    }
+    else
+    {
+        [self setIsNoComment];
+    }
+}
+
+- (void)setIsNoComment
+{
+    [faceView setHidden:YES];
+    [noCommentLabel setText:@"No comments."];
 }
 
 @end

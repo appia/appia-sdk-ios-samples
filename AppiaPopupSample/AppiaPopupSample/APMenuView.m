@@ -36,7 +36,7 @@
         
         menuText = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, self.frame.size.width, self.frame.size.height)];
         [menuText setBackgroundColor:[UIColor clearColor]];
-        [menuText setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:13.0]];
+        [menuText setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:15.0]];
         [menuText setTextColor:[UIColor whiteColor]];
         [self addSubview:menuText];
         

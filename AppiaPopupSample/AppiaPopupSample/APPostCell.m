@@ -8,6 +8,7 @@
 
 #import "APPostCell.h"
 #import "APPostView.h"
+#import "APImageView.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface APPostCell ()
@@ -35,6 +36,7 @@
         highlightColor = [UIColor colorWithWhite:0.9 alpha:1.0];
         
         postView = [[APPostView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)];
+        [postView setDelegate:self];
         [postView setPostBackgroundColor:normalColor];
         [[self contentView] addSubview:postView];
     }
@@ -64,6 +66,11 @@
 - (void)setPost:(APPost *)post
 {
     [postView setPost:post];
+}
+
+- (void)tappedPhoto:(APImageView *)photo
+{
+    [self.delegate photoTapped:photo inPostCell:self];
 }
 
 @end

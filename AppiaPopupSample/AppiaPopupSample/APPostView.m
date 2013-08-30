@@ -10,12 +10,14 @@
 #import "APPost.h"
 #import "APCommentView.h"
 #import "APComment.h"
+#import "APImageView.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface APPostView ()
 {
     UILabel *ownerLabel, *dateLabel, *postTextLabel, *commentsLabel;
     UIView *postView, *commentsNumberView, *commentsView;
+    UIImageView *picView;
     UIScrollView *photoView;
     APPost *postData;
     
@@ -33,7 +35,7 @@
         
         [self setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
         
-        postView = [[UIView alloc] initWithFrame:CGRectMake(5.0, 5.0, self.frame.size.width - 10.0, self.frame.size.height - 10.0)];
+        postView = [[UIView alloc] initWithFrame:CGRectMake(8.0, 8.0, self.frame.size.width - 16.0, self.frame.size.height - 16.0)];
         [postView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
         [postView setBackgroundColor:[UIColor whiteColor]];
         [[postView layer] setCornerRadius:3.0];
@@ -42,17 +44,17 @@
         [[postView layer] setBorderWidth:1.0];
         [self addSubview:postView];
        
-        UIView *picView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 10.0, 40.0, 40.0)];
+        picView = [[UIImageView alloc] initWithFrame:CGRectMake(10.0, 10.0, 40.0, 40.0)];
         [picView setBackgroundColor:[UIColor colorWithWhite:0.4 alpha:1.0]];
         [postView addSubview:picView];
         
-        ownerLabel = [[UILabel alloc] initWithFrame:CGRectMake(60.0, 10.0, 100.0, 15.0)];
+        ownerLabel = [[UILabel alloc] initWithFrame:CGRectMake(60.0, 10.0, 100.0, 20.0)];
         [ownerLabel setBackgroundColor:[UIColor clearColor]];
-        [ownerLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:12.0]];
+        [ownerLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:13.0]];
         [ownerLabel setTextColor:[UIColor colorWithWhite:0.3 alpha:1.0]];
         [postView addSubview:ownerLabel];
         
-        dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(60.0, 25.0, 100.0, 15.0)];
+        dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(60.0, 27.0, 100.0, 15.0)];
         [dateLabel setBackgroundColor:[UIColor clearColor]];
         [dateLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:10.0]];
         [dateLabel setTextColor:[UIColor colorWithWhite:0.5 alpha:1.0]];
@@ -94,16 +96,22 @@
         [photoView setShowsHorizontalScrollIndicator:NO];
         [photoView setPagingEnabled:YES];
         [photoView setHidden:YES];
-        [self addSubview:photoView];
+        [self addSubview:photoView];        
     }
     return self;
 }
 
 - (void)setPost:(APPost *)post
 {
+    [self setPost:post withSelectedPhoto:nil];
+}
+
+- (void)setPost:(APPost *)post withSelectedPhoto:(APImageView *)photoToSelect
+{
     postData = post;
     
     [ownerLabel setText:[post owner]];
+    [picView setImage:[post pictureImage]];
     [dateLabel setText:[post date]];
     [postTextLabel setText:[post text]];
     [postTextLabel sizeToFit];
@@ -117,18 +125,32 @@
     NSArray *photos = post.photos;
     if ([photos count] > 0)
     {
-        CGFloat xOffset = 5.0;
+        CGFloat xOffset = 2.0;
+        CGFloat scrollOffsetX = 2.0;
         for (NSString *photoPath in photos)
         {
-            UIImageView *view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:photoPath]];
+            APImageView *view = [[APImageView alloc] initWithImage:[UIImage imageNamed:photoPath]];
+            [view setUserInteractionEnabled:YES];
+            [view setPath:photoPath];
             [view setFrame:CGRectMake(xOffset, 0.0, 280.0, 280.0)];
             [photoView addSubview:view];
             
-            xOffset += view.frame.size.width + 10.0;
+            if (photoToSelect && [photoPath isEqualToString:[photoToSelect path]])
+            {
+                scrollOffsetX = xOffset - 2.0;
+            }
+            
+            //add a tap recognizer
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedPhoto:)];
+            [tap setNumberOfTapsRequired:1];
+            [view addGestureRecognizer:tap];
+            
+            xOffset += view.frame.size.width + 8.0;
         }
-        [photoView setFrame:CGRectMake(postView.frame.origin.x + 10.0, postView.frame.origin.y + postTextLabel.frame.origin.y + postTextLabel.frame.size.height + 10.0, 290.0, 300.0)];
+        [photoView setFrame:CGRectMake(postView.frame.origin.x + 10.0, postView.frame.origin.y + postTextLabel.frame.origin.y + postTextLabel.frame.size.height + 10.0, 288.0, 300.0)];
         [photoView setContentSize:CGSizeMake(xOffset, 280.0)];
-        [photoView setHidden:NO];
+        [photoView setContentOffset:CGPointMake(scrollOffsetX, 0.0) animated:NO];
+        [photoView setHidden:NO];        
     }
 }
 
@@ -156,7 +178,16 @@
             yOffset += view.frame.size.height;
         }
         
-        CGFloat commentsOrigin = postTextLabel.frame.origin.y + postTextLabel.frame.size.height + 20.0;
+        if ([[postData comments] count] == 0)
+        {
+            APCommentView *view = [[APCommentView alloc] initWithFrame:CGRectMake(0.0, yOffset, postView.frame.size.width, 30.0)];
+            [view setComment:nil];
+            [commentsView addSubview:view];
+            
+            yOffset += view.frame.size.height;
+        }
+        
+        CGFloat commentsOrigin = postTextLabel.frame.origin.y + postTextLabel.frame.size.height + 10.0;
         if ([[postData photos] count] > 0)
         {
             commentsOrigin += 290.0;
@@ -166,6 +197,12 @@
         [postView bringSubviewToFront:commentsView];
         [commentsView setHidden:NO];
     }
+}
+
+- (void)tappedPhoto:(UITapGestureRecognizer *)gr
+{
+    APImageView *photo = (APImageView *)[gr view];
+    [self.delegate tappedPhoto:photo];
 }
 
 @end

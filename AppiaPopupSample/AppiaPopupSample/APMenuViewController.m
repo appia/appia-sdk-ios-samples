@@ -42,7 +42,7 @@
     [nameLabel setText:@"Brian Watkins"];
     [[self view] addSubview:nameLabel];
     
-    UIView *menuHolder = [[UIView alloc] initWithFrame:CGRectMake(0.0, 70.0, 195.0, self.view.frame.size.height)];
+    UIView *menuHolder = [[UIView alloc] initWithFrame:CGRectMake(0.0, 70.0, 320.0, self.view.frame.size.height)];
     [[self view] addSubview:menuHolder];
     
 	// Do any additional setup after loading the view.
@@ -52,7 +52,7 @@
     NSInteger tagNumber = 0;
     for (NSString *menuText in menuItems)
     {
-        APMenuView *menuView = [[APMenuView alloc] initWithFrame:CGRectMake(0.0, yOffset, 195.0, 30.0)];
+        APMenuView *menuView = [[APMenuView alloc] initWithFrame:CGRectMake(0.0, yOffset, menuHolder.frame.size.width, 45.0)];
         [menuView setDelegate:self];
         [menuView setTitle:menuText];
         [menuView setTag:tagNumber++];

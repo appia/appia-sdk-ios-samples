@@ -15,9 +15,12 @@
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Light" size:13.0];
     CGSize commentTextSize = [self.text sizeWithFont:font constrainedToSize:CGSizeMake(290.0, CGFLOAT_MAX)];
     
-    NSLog(@"comment textSize: %f", commentTextSize.height);
-    
     return 42.0 + commentTextSize.height;
+}
+
+- (UIImage *)pictureImage
+{
+    return [UIImage imageNamed:self.picture];
 }
 
 @end

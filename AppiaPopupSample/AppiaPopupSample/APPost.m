@@ -32,9 +32,19 @@
         commentsHeight += [comment heightForComment];
     }
     
+    if ([self.comments count] == 0)
+    {
+        commentsHeight += 30.0;
+    }
+    
     CGFloat photoHeight = ([self.photos count] > 0) ? 290.0 : 0.0;
     
-    return 90.0 + postTextSize.height + commentsHeight + photoHeight;
+    return 87.0 + postTextSize.height + commentsHeight + photoHeight;
+}
+
+- (UIImage *)pictureImage
+{
+    return [UIImage imageNamed:self.picture];
 }
 
 @end

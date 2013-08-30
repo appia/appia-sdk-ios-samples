@@ -12,8 +12,11 @@
 
 @property (nonatomic,strong) NSString *text;
 @property (nonatomic,strong) NSString *owner;
+@property (nonatomic,strong) NSString *picture;
 @property (nonatomic,strong) NSString *date;
 
 - (CGFloat)heightForComment;
+
+- (UIImage *)pictureImage;
 
 @end

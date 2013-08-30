@@ -11,11 +11,13 @@
 #import "APPost.h"
 #import "APPostCell.h"
 #import "APPostViewController.h"
+#import "APImageView.h"
 
 @interface APViewController ()
 {
     NSArray *posts;
     NSIndexPath *selectedPostIndex;
+    APImageView *selectedPhoto;
     UITableView *postTable;
 }
 
@@ -34,6 +36,32 @@
     posts = [postFactory posts];
     
     [[self view] setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
+    
+    //fix up the nav bar
+    UIButton *b = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 50.0, 50.0)];
+    [b setImage:[UIImage imageNamed:@"menu_button.png"] forState:UIControlStateNormal];
+    [b addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];
+    [b setImageEdgeInsets:UIEdgeInsetsMake(0.0, -3.0, 0.0, 3.0)];
+    [b setShowsTouchWhenHighlighted:YES];
+    
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithCustomView:b];
+    [[self navigationItem] setLeftBarButtonItem:menuButton];
+
+    UIButton *a = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 50.0, 50.0)];
+    [a setImage:[UIImage imageNamed:@"add_button.png"] forState:UIControlStateNormal];
+    //[b addTarget:self action:@selector(ad:) forControlEvents:UIControlEventTouchUpInside];
+    [a setImageEdgeInsets:UIEdgeInsetsMake(0.0, 3.0, 0.0, -3.0)];
+    [a setShowsTouchWhenHighlighted:YES];
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithCustomView:a];
+    [[self navigationItem] setRightBarButtonItem:addButton];
+
+    //set a back button for me
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Posts"
+                                                                   style:UIBarButtonItemStyleBordered
+                                                                  target:nil
+                                                                  action:nil];
+    [[self navigationItem] setBackBarButtonItem:backButton];
     
     //for iOS 7
     //[[[self navigationController] navigationBar] setBarTintColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
@@ -89,11 +117,27 @@
     //present the view controller for viewing a post
     APPostViewController *postVC = [segue destinationViewController];
     [postVC setPost:[posts objectAtIndex:[selectedPostIndex row]]];
+    
+    if (selectedPhoto)
+    {
+        [postVC setSelectedPhoto:selectedPhoto];
+        selectedPhoto = nil;
+    }
 }
 
 - (IBAction)showMenu:(id)sender
 {
     [self.slidingViewController anchorTopViewTo:ECRight];
+}
+
+- (void)photoTapped:(APImageView *)photo inPostCell:(APPostCell *)cell
+{
+    selectedPhoto = photo;
+    
+    //select the cell
+    NSIndexPath *index = [postTable indexPathForCell:cell];    
+    [postTable selectRowAtIndexPath:index animated:YES scrollPosition:UITableViewScrollPositionNone];
+    [self tableView:postTable didSelectRowAtIndexPath:index];
 }
 
 #pragma mark - TableViewDataSource methods
@@ -120,6 +164,7 @@
     if (!cell)
     {
         cell = [[APPostCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        [cell setDelegate:self];
     }
     
     [cell setPost:[posts objectAtIndex:indexPath.row]];

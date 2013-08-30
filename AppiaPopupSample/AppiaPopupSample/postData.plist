@@ -5,6 +5,8 @@
 	<dict>
 		<key>owner</key>
 		<string>Brian Watkins</string>
+		<key>picture</key>
+		<string>brian.png</string>
 		<key>date</key>
 		<string>August 25, 2013</string>
 		<key>text</key>
@@ -14,6 +16,8 @@
 			<dict>
 				<key>owner</key>
 				<string>Geoff Berry</string>
+				<key>picture</key>
+				<string>geoff.png</string>
 				<key>date</key>
 				<string>August 25, 2013</string>
 				<key>text</key>
@@ -23,7 +27,9 @@
 	</dict>
 	<dict>
 		<key>owner</key>
-		<string>Brian Watkins</string>
+		<string>Ed Holzwarth</string>
+		<key>picture</key>
+		<string>ed.png</string>
 		<key>text</key>
 		<string>My favorite video game is Galaga! It&apos;s really fun to play. You should try it!</string>
 		<key>date</key>
@@ -33,6 +39,8 @@
 			<dict>
 				<key>owner</key>
 				<string>Geoff Berry</string>
+				<key>picture</key>
+				<string>geoff.png</string>
 				<key>date</key>
 				<string>August 21, 2013</string>
 				<key>text</key>
@@ -41,6 +49,8 @@
 			<dict>
 				<key>owner</key>
 				<string>Gloria Watkins</string>
+				<key>picture</key>
+				<string>gloria.png</string>
 				<key>date</key>
 				<string>August 21, 2013</string>
 				<key>text</key>
@@ -48,7 +58,9 @@
 			</dict>
 			<dict>
 				<key>owner</key>
-				<string>Bob Costas</string>
+				<string>Brian Watkins</string>
+				<key>picture</key>
+				<string>brian.png</string>
 				<key>date</key>
 				<string>August 21, 2013</string>
 				<key>text</key>
@@ -59,6 +71,8 @@
 	<dict>
 		<key>owner</key>
 		<string>Brian Watkins</string>
+		<key>picture</key>
+		<string>brian.png</string>
 		<key>text</key>
 		<string>Here are some pictures of the food I&apos;ve eaten recently!</string>
 		<key>date</key>
@@ -67,7 +81,9 @@
 		<array>
 			<dict>
 				<key>owner</key>
-				<string>Ariana Stokes</string>
+				<string>Ed Holzwarth</string>
+				<key>picture</key>
+				<string>ed.png</string>
 				<key>date</key>
 				<string>August 12, 2013</string>
 				<key>text</key>
@@ -75,7 +91,9 @@
 			</dict>
 			<dict>
 				<key>owner</key>
-				<string>Ed Holzwarth</string>
+				<string>Geoff Berry</string>
+				<key>picture</key>
+				<string>geoff.png</string>
 				<key>date</key>
 				<string>August 8, 2013</string>
 				<key>text</key>
@@ -92,6 +110,8 @@
 	<dict>
 		<key>owner</key>
 		<string>Brian Watkins</string>
+		<key>picture</key>
+		<string>brian.png</string>
 		<key>text</key>
 		<string>Another fun post!</string>
 		<key>date</key>
@@ -100,6 +120,8 @@
 	<dict>
 		<key>owner</key>
 		<string>Brian Watkins</string>
+		<key>picture</key>
+		<string>brian.png</string>
 		<key>text</key>
 		<string>Here is my first post!</string>
 		<key>date</key>

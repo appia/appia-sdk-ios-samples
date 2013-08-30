@@ -51,6 +51,7 @@
     {
         APPost *post = [[APPost alloc] init];
         [post setOwner:[properties objectForKey:@"owner"]];
+        [post setPicture:[properties objectForKey:@"picture"]];
         [post setText:[properties objectForKey:@"text"]];
         [post setDate:[properties objectForKey:@"date"]];
         
@@ -76,6 +77,7 @@
         [comment setText:[dict objectForKey:@"text"]];
         [comment setDate:[dict objectForKey:@"date"]];
         [comment setOwner:[dict objectForKey:@"owner"]];
+        [comment setPicture:[dict objectForKey:@"picture"]];
         [comments addObject:comment];
     }
     
