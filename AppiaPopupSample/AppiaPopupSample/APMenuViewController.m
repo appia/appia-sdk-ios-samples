@@ -28,11 +28,11 @@
 {
     [super viewDidLoad];
     
-    [[self view] setBackgroundColor:[UIColor darkGrayColor]];
+    [[self view] setBackgroundColor:[UIColor colorWithWhite:0.4 alpha:1.0]];
     
     //name view
-    UIView *faceImg = [[UIView alloc] initWithFrame:CGRectMake(10.0, 10.0, 50.0, 50.0)];
-    [faceImg setBackgroundColor:[UIColor colorWithWhite:0.2 alpha:1.0]];
+    UIImageView *faceImg = [[UIImageView alloc] initWithFrame:CGRectMake(10.0, 10.0, 50.0, 50.0)];
+    [faceImg setImage:[UIImage imageNamed:@"blue.png"]];
     [[self view] addSubview:faceImg];
     
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(65.0, 40.0, 150.0, 20.0)];

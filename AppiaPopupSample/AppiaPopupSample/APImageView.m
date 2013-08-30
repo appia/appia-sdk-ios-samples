@@ -16,8 +16,7 @@
     self = [super initWithImage:image];
     if (self)
     {
-        //[[self layer] setBorderColor:[[UIColor colorWithWhite:0.5 alpha:1.0] CGColor]];
-        //[[self layer] setBorderWidth:1.0];
+        [self setBackgroundColor:[UIColor clearColor]];
     }
     return self;
 }

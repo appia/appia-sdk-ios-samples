@@ -35,7 +35,7 @@
     APPostFactory *postFactory = [[APPostFactory alloc] initWithPostFile:postFile];
     posts = [postFactory posts];
     
-    [[self view] setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
+    [[self view] setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
     
     //fix up the nav bar
     UIButton *b = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 50.0, 50.0)];
@@ -71,7 +71,7 @@
     [postTable setDataSource:self];
     [postTable setDelegate:self];
     [postTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    [postTable setBackgroundColor:[UIColor colorWithWhite:0.8 alpha:1.0]];
+    [postTable setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
     [[self view] addSubview:postTable];
 }
 

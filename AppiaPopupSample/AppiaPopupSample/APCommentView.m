@@ -26,13 +26,12 @@
     {
         //add a separator line
         UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, 1.0)];
-        [sep setBackgroundColor:[UIColor colorWithWhite:0.6 alpha:1.0]];
+        [sep setBackgroundColor:[UIColor colorWithWhite:0.75 alpha:1.0]];
         [self addSubview:sep];
         
         CGFloat xOffset = 40.0;
         
         faceView = [[UIImageView alloc] initWithFrame:CGRectMake(10.0, 8.0, 20.0, 20.0)];
-        [faceView setBackgroundColor:[UIColor colorWithWhite:0.3 alpha:1.0]];
         [self addSubview:faceView];
         
         //init the labels

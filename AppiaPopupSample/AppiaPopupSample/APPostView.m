@@ -40,12 +40,11 @@
         [postView setBackgroundColor:[UIColor whiteColor]];
         [[postView layer] setCornerRadius:3.0];
         [[postView layer] setMasksToBounds:YES];
-        [[postView layer] setBorderColor:[[UIColor colorWithWhite:0.6 alpha:1.0] CGColor]];
+        [[postView layer] setBorderColor:[[UIColor colorWithWhite:0.75 alpha:1.0] CGColor]];
         [[postView layer] setBorderWidth:1.0];
         [self addSubview:postView];
        
         picView = [[UIImageView alloc] initWithFrame:CGRectMake(10.0, 10.0, 40.0, 40.0)];
-        [picView setBackgroundColor:[UIColor colorWithWhite:0.4 alpha:1.0]];
         [postView addSubview:picView];
         
         ownerLabel = [[UILabel alloc] initWithFrame:CGRectMake(60.0, 10.0, 100.0, 20.0)];
@@ -71,22 +70,23 @@
         //a view for the number of comments
         commentsNumberView = [[UIView alloc] initWithFrame:CGRectMake(0.0, postView.frame.size.height - 25.0, postView.frame.size.width, 25.0)];
         [commentsNumberView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin];
-        [commentsNumberView setBackgroundColor:[UIColor colorWithWhite:0.95 alpha:1.0]];
+        [commentsNumberView setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1.0]];
         [postView addSubview:commentsNumberView];
 
         UIView *commentsSep = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, commentsNumberView.frame.size.width, 1.0)];
-        [commentsSep setBackgroundColor:[UIColor colorWithWhite:0.6 alpha:1.0]];
+        [commentsSep setBackgroundColor:[UIColor colorWithWhite:0.75 alpha:1.0]];
         [commentsNumberView addSubview:commentsSep];
         
         commentsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, postView.frame.size.width - 20.0, commentsNumberView.frame.size.height)];
         [commentsLabel setBackgroundColor:[UIColor clearColor]];
         [commentsLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:10.0]];
         [commentsLabel setTextColor:[UIColor colorWithWhite:0.3 alpha:1.0]];
+        [commentsLabel setTextAlignment:NSTextAlignmentRight];
         [commentsNumberView addSubview:commentsLabel];
         
         //a view for the comments
         commentsView = [[UIView alloc] initWithFrame:CGRectZero];
-        [commentsView setBackgroundColor:[UIColor colorWithWhite:0.95 alpha:1.0]];
+        [commentsView setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1.0]];
         [commentsView setHidden:YES];
         [postView addSubview:commentsView];
         
