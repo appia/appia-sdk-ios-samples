@@ -10,7 +10,7 @@
 
 @interface APPostFactory : NSObject
 
-- (id)initWithPostFile:(NSString *)path;
+- (id)initWithPostFile:(NSString *)path andSponsoredPosts:(NSInteger)numberOfAds;
 
 - (NSArray *)posts;
 

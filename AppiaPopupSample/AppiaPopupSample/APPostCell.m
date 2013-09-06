@@ -9,12 +9,16 @@
 #import "APPostCell.h"
 #import "APPostView.h"
 #import "APImageView.h"
+#import "APSponsoredPostView.h"
+#import "APUtilityPostView.h"
+#import "APPostable.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface APPostCell ()
 {
-    APPostView *postView;
+    UIView <APPostable> *postableView;
     UIColor *highlightColor, *normalColor;
+    APPost *post;
 }
 
 
@@ -35,10 +39,6 @@
         normalColor = [UIColor whiteColor];
         highlightColor = [UIColor colorWithWhite:0.9 alpha:1.0];
         
-        postView = [[APPostView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)];
-        [postView setDelegate:self];
-        [postView setPostBackgroundColor:normalColor];
-        [[self contentView] addSubview:postView];
     }
     return self;
 }
@@ -49,7 +49,7 @@
 
     // Configure the view for the selected state
     [UIView animateWithDuration:(animated ? 0.2 : 0.0) delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        [postView setPostBackgroundColor:(selected ? highlightColor : normalColor)];
+        [postableView setPostBackgroundColor:(selected ? highlightColor : normalColor)];
     } completion:NULL];
 }
 
@@ -59,13 +59,53 @@
     
     // Configure the view for the selected state
     [UIView animateWithDuration:(animated ? 0.2 : 0.0) delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        [postView setPostBackgroundColor:(highlighted ? highlightColor : normalColor)];
+        [postableView setPostBackgroundColor:(highlighted ? highlightColor : normalColor)];
     } completion:NULL];
 }
 
-- (void)setPost:(APPost *)post
+- (void)setPost:(APPost *)p
 {
-    [postView setPost:post];
+    post = p;
+    
+    if (postableView)
+    {
+        [postableView removeFromSuperview];
+    }
+        
+    switch (post.type)
+    {
+        case APPostTypeStandard:
+        {
+            APPostView *postView = [[APPostView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)];
+            [postView setDelegate:self];
+            [postView setPostBackgroundColor:normalColor];
+            
+            postableView = postView;
+
+            break;
+        }
+        case APPostTypeSponsored:
+        {
+            postableView = [[APSponsoredPostView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)];
+
+            break;
+        }
+        case APPostTypeUtility:
+        {
+            postableView = [[APUtilityPostView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height)];
+            
+            break;
+        }
+    }
+
+    [postableView setPost:post];
+    
+    [[self contentView] addSubview:postableView];
+}
+
+- (APPost *)post
+{
+    return post;
 }
 
 - (void)tappedPhoto:(APImageView *)photo

@@ -8,8 +8,13 @@
 
 #import "APMenuViewController.h"
 #import "APMenuView.h"
+#import "ECSlidingViewController.h"
+#import <AppiaSDK/Appia.h>
 
 @interface APMenuViewController ()
+{
+    AIAppWall *appWall;
+}
 
 @end
 
@@ -29,6 +34,9 @@
     [super viewDidLoad];
     
     [[self view] setBackgroundColor:[UIColor colorWithWhite:0.4 alpha:1.0]];
+    
+    //create the app wall object
+    appWall = [[AIAppia sharedInstance] createAppWall];
     
     //name view
     UIImageView *faceImg = [[UIImageView alloc] initWithFrame:CGRectMake(10.0, 10.0, 50.0, 50.0)];
@@ -71,7 +79,15 @@
 
 - (void)menuViewDidReceiveTap:(APMenuView *)menuView
 {
-    NSLog(@"Tapped menu item: %i", [menuView tag]);
+    if ([menuView tag] == 3)
+    {
+        [self.slidingViewController resetTopViewWithAnimations:NULL onComplete:^{
+           
+            //tapped the more apps button; pop up the AppWall!
+            [appWall presentFromMainWindow];
+
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning

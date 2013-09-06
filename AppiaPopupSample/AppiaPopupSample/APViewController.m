@@ -12,6 +12,7 @@
 #import "APPostCell.h"
 #import "APPostViewController.h"
 #import "APImageView.h"
+#import <AppiaSDK/Appia.h>
 
 @interface APViewController ()
 {
@@ -19,6 +20,9 @@
     NSIndexPath *selectedPostIndex;
     APImageView *selectedPhoto;
     UITableView *postTable;
+    
+    AIAppWall *appWall;
+    BOOL hasShownInitialAppWall;
 }
 
 @end
@@ -30,9 +34,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    //initialize app wall
+    appWall = [[AIAppia sharedInstance] createAppWall];
+    
+    hasShownInitialAppWall = NO;
+    
     //load the posts
     NSString *postFile = [[NSBundle mainBundle] pathForResource:@"postData" ofType:@"plist"];
-    APPostFactory *postFactory = [[APPostFactory alloc] initWithPostFile:postFile];
+    APPostFactory *postFactory = [[APPostFactory alloc] initWithPostFile:postFile andSponsoredPosts:2];
     posts = [postFactory posts];
     
     [[self view] setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
@@ -78,7 +87,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     if (![self.slidingViewController.underLeftViewController isKindOfClass:NSClassFromString(@"APMenuViewController")])
     {
 	    self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
@@ -95,6 +104,13 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    //open up an app wall the fist time we appear (upon startup of the app)
+    if (!hasShownInitialAppWall)
+    {
+        [appWall presentFromMainWindow];
+        hasShownInitialAppWall = YES;
+    }
     
     if (selectedPostIndex)
     {
@@ -176,8 +192,41 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    selectedPostIndex = indexPath;
-    [self performSegueWithIdentifier:@"seguePostView" sender:self];
+    APPostCell *selectedCell = (APPostCell *)[tableView cellForRowAtIndexPath:indexPath];
+    APPost *post = [selectedCell post];
+    
+    switch (post.type)
+    {
+        case APPostTypeStandard:
+        {
+            [self performSegueWithIdentifier:@"seguePostView" sender:self];
+            selectedPostIndex = indexPath;
+
+            break;
+        }
+        case APPostTypeSponsored:
+        {
+            //pop up the app wall
+            [appWall presentFromMainWindow];
+            
+            [postTable deselectRowAtIndexPath:indexPath animated:YES];
+
+            break;
+        }
+        case APPostTypeUtility:
+        {
+            //pop up the app wall
+            [appWall presentFromMainWindow];
+            
+            [postTable deselectRowAtIndexPath:indexPath animated:YES];
+
+            //scroll to the top
+            [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+            
+            break;
+        }
+    }
+    
 }
 
 @end

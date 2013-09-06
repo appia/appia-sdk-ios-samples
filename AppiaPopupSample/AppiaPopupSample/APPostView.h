@@ -8,17 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "APPostViewDelegate.h"
+#import "APPostable.h"
 @class APPost;
 @class APImageView;
 
-@interface APPostView : UIView
+@interface APPostView : UIView <APPostable>
 
 @property (nonatomic,assign) id <APPostViewDelegate> delegate;
 
-- (void)setPost:(APPost *)post;
 - (void)setPost:(APPost *)post withSelectedPhoto:(APImageView *)photo;
-
-- (void)setPostBackgroundColor:(UIColor *)color;
 
 - (void)setCommentsVisible:(BOOL)visible;
 

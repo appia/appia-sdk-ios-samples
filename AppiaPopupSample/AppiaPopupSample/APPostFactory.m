@@ -8,21 +8,25 @@
 
 #import "APPostFactory.h"
 #import "APPost.h"
+#import "APSponsoredPost.h"
+#import "APUtilityPost.h"
 #import "APComment.h"
 
 @interface APPostFactory ()
 
 @property (nonatomic,strong) NSString *postFilePath;
+@property (nonatomic,assign) NSInteger numberOfSponsoredPosts;
 
 @end
 
 @implementation APPostFactory
 
-- (id)initWithPostFile:(NSString *)path
+- (id)initWithPostFile:(NSString *)path andSponsoredPosts:(NSInteger)numberOfAds
 {
     if ((self = [super init]))
     {
         [self setPostFilePath:path];
+        [self setNumberOfSponsoredPosts:numberOfAds];
     }
     
     return self;
@@ -45,8 +49,11 @@
     {
         NSLog(@"Error reading plist: %@, format: %d", errorDesc, format);
     }
+
+    NSInteger totalPosts = [postProperties count] + self.numberOfSponsoredPosts;
     
-    NSMutableArray *posts = [[NSMutableArray alloc] initWithCapacity:[postProperties count]];
+    NSMutableArray *posts = [[NSMutableArray alloc] initWithCapacity:totalPosts];
+    
     for (NSDictionary *properties in postProperties)
     {
         APPost *post = [[APPost alloc] init];
@@ -63,6 +70,18 @@
         
         [posts addObject:post];
     }
+    
+    //insert the sponsored posts
+    for ( int x = 0; x < self.numberOfSponsoredPosts; x++ )
+    {
+        APSponsoredPost *sponsoredPost = [[APSponsoredPost alloc] init];        
+        [posts insertObject:sponsoredPost atIndex:(4 * x + 1)];
+    }
+    
+    //add a post for 'Load more posts'
+    APUtilityPost *loadMore = [[APUtilityPost alloc] init];
+    [loadMore setText:@"Load More Posts!"];
+    [posts addObject:loadMore];
     
     return posts;
 }

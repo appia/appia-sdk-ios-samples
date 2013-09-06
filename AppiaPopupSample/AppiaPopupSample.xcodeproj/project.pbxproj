@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4106AFF917DA0CE30061D736 /* AppiaSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4106AFF717DA0CE30061D736 /* AppiaSDK.bundle */; };
+		4106AFFA17DA0CE30061D736 /* AppiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4106AFF817DA0CE30061D736 /* AppiaSDK.framework */; };
+		4106AFFC17DA0D020061D736 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4106AFFB17DA0D020061D736 /* QuartzCore.framework */; };
+		4106AFFE17DA0D0A0061D736 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4106AFFD17DA0D0A0061D736 /* AdSupport.framework */; };
+		4106B00417DA1DD50061D736 /* APSponsoredPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4106B00317DA1DD50061D736 /* APSponsoredPost.m */; };
+		4106B00717DA1EA50061D736 /* APSponsoredPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4106B00617DA1EA50061D736 /* APSponsoredPostView.m */; };
+		4106B00B17DA307D0061D736 /* APUtilityPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4106B00A17DA307D0061D736 /* APUtilityPost.m */; };
+		4106B00E17DA30CC0061D736 /* APUtilityPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4106B00D17DA30CC0061D736 /* APUtilityPostView.m */; };
 		413E2F9117D13DE20002FDA6 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 413E2F8717D13DE20002FDA6 /* blue.png */; };
 		413E2F9217D13DE20002FDA6 /* blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 413E2F8817D13DE20002FDA6 /* blue@2x.png */; };
 		413E2F9317D13DE20002FDA6 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 413E2F8917D13DE20002FDA6 /* green.png */; };
@@ -51,6 +59,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4106AFF717DA0CE30061D736 /* AppiaSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppiaSDK.bundle; sourceTree = "<group>"; };
+		4106AFF817DA0CE30061D736 /* AppiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppiaSDK.framework; sourceTree = "<group>"; };
+		4106AFFB17DA0D020061D736 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4106AFFD17DA0D0A0061D736 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4106B00217DA1DD50061D736 /* APSponsoredPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSponsoredPost.h; sourceTree = "<group>"; };
+		4106B00317DA1DD50061D736 /* APSponsoredPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSponsoredPost.m; sourceTree = "<group>"; };
+		4106B00517DA1EA40061D736 /* APSponsoredPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSponsoredPostView.h; sourceTree = "<group>"; };
+		4106B00617DA1EA50061D736 /* APSponsoredPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APSponsoredPostView.m; sourceTree = "<group>"; };
+		4106B00817DA1FB90061D736 /* APPostable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPostable.h; sourceTree = "<group>"; };
+		4106B00917DA307C0061D736 /* APUtilityPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APUtilityPost.h; sourceTree = "<group>"; };
+		4106B00A17DA307D0061D736 /* APUtilityPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APUtilityPost.m; sourceTree = "<group>"; };
+		4106B00C17DA30CB0061D736 /* APUtilityPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APUtilityPostView.h; sourceTree = "<group>"; };
+		4106B00D17DA30CC0061D736 /* APUtilityPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APUtilityPostView.m; sourceTree = "<group>"; };
 		413E2F8717D13DE20002FDA6 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		413E2F8817D13DE20002FDA6 /* blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue@2x.png"; sourceTree = "<group>"; };
 		413E2F8917D13DE20002FDA6 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
@@ -119,9 +140,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4106AFFE17DA0D0A0061D736 /* AdSupport.framework in Frameworks */,
+				4106AFFC17DA0D020061D736 /* QuartzCore.framework in Frameworks */,
 				41A31BC217CF9B8100E0887A /* UIKit.framework in Frameworks */,
 				41A31BC417CF9B8100E0887A /* Foundation.framework in Frameworks */,
 				41A31BC617CF9B8100E0887A /* CoreGraphics.framework in Frameworks */,
+				4106AFFA17DA0CE30061D736 /* AppiaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +172,10 @@
 		41A31BC017CF9B8100E0887A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4106AFF717DA0CE30061D736 /* AppiaSDK.bundle */,
+				4106AFF817DA0CE30061D736 /* AppiaSDK.framework */,
+				4106AFFD17DA0D0A0061D736 /* AdSupport.framework */,
+				4106AFFB17DA0D020061D736 /* QuartzCore.framework */,
 				41A31BC117CF9B8100E0887A /* UIKit.framework */,
 				41A31BC317CF9B8100E0887A /* Foundation.framework */,
 				41A31BC517CF9B8100E0887A /* CoreGraphics.framework */,
@@ -171,6 +199,10 @@
 				41A31BEB17CF9BC500E0887A /* APPostFactory.m */,
 				41A31BE617CF9BC500E0887A /* APPost.h */,
 				41A31BE717CF9BC500E0887A /* APPost.m */,
+				4106B00217DA1DD50061D736 /* APSponsoredPost.h */,
+				4106B00317DA1DD50061D736 /* APSponsoredPost.m */,
+				4106B00917DA307C0061D736 /* APUtilityPost.h */,
+				4106B00A17DA307D0061D736 /* APUtilityPost.m */,
 				41A31C1117CFC47600E0887A /* APComment.h */,
 				41A31C1217CFC47600E0887A /* APComment.m */,
 				41A31BE817CF9BC500E0887A /* APPostCell.h */,
@@ -178,6 +210,11 @@
 				41BF550817D0E90B00F673FB /* APPostCellDelegate.h */,
 				41A31BEC17CF9BC500E0887A /* APPostView.h */,
 				41A31BED17CF9BC500E0887A /* APPostView.m */,
+				4106B00517DA1EA40061D736 /* APSponsoredPostView.h */,
+				4106B00617DA1EA50061D736 /* APSponsoredPostView.m */,
+				4106B00C17DA30CB0061D736 /* APUtilityPostView.h */,
+				4106B00D17DA30CC0061D736 /* APUtilityPostView.m */,
+				4106B00817DA1FB90061D736 /* APPostable.h */,
 				41BF550717D0E7E700F673FB /* APPostViewDelegate.h */,
 				41BF54FF17D0D6B000F673FB /* APImageView.h */,
 				41BF550017D0D6B000F673FB /* APImageView.m */,
@@ -318,6 +355,7 @@
 				413E2F9817D13DE20002FDA6 /* red@2x.png in Resources */,
 				413E2F9917D13DE20002FDA6 /* yellow.png in Resources */,
 				413E2F9A17D13DE20002FDA6 /* yellow@2x.png in Resources */,
+				4106AFF917DA0CE30061D736 /* AppiaSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +381,10 @@
 				41A31C1317CFC47600E0887A /* APComment.m in Sources */,
 				41A31C1D17CFE78800E0887A /* APMenuView.m in Sources */,
 				41BF550117D0D6B000F673FB /* APImageView.m in Sources */,
+				4106B00417DA1DD50061D736 /* APSponsoredPost.m in Sources */,
+				4106B00717DA1EA50061D736 /* APSponsoredPostView.m in Sources */,
+				4106B00B17DA307D0061D736 /* APUtilityPost.m in Sources */,
+				4106B00E17DA30CC0061D736 /* APUtilityPostView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,9 +469,14 @@
 		41A31BE217CF9B8100E0887A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppiaPopupSample/AppiaPopupSample-Prefix.pch";
 				INFOPLIST_FILE = "AppiaPopupSample/AppiaPopupSample-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -438,9 +485,14 @@
 		41A31BE317CF9B8100E0887A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppiaPopupSample/AppiaPopupSample-Prefix.pch";
 				INFOPLIST_FILE = "AppiaPopupSample/AppiaPopupSample-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

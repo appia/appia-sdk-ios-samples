@@ -16,5 +16,6 @@
 @property (nonatomic,assign) id <APPostCellDelegate> delegate;
 
 - (void)setPost:(APPost *)post;
+- (APPost *)post;
 
 @end

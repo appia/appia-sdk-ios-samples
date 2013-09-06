@@ -10,11 +10,13 @@
 #import "APPost.h"
 #import "APPostView.h"
 #import "APImageView.h"
+#import <AppiaSDK/Appia.h>
 
 @interface APPostViewController ()
 {
     APPostView *postView;
     UIScrollView *scrollView;
+    AIBannerAd *bannerAd;
 }
 @end
 
@@ -33,6 +35,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //initialize the banner ad
+    bannerAd = [[AIAppia sharedInstance] createBannerAdWithSize:AIBannerAdFullScreen];
     
     [[self view] setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
     
@@ -56,6 +61,14 @@
     [postView setCommentsVisible:YES];
         
     [scrollView setContentSize:CGSizeMake(postView.frame.size.width, postView.frame.size.height)];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    //show the banner ad
+    [bannerAd presentFromMainWindow];
 }
 
 - (void)didReceiveMemoryWarning

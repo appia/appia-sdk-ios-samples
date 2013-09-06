@@ -20,7 +20,6 @@
     UIImageView *picView;
     UIScrollView *photoView;
     APPost *postData;
-    
 }
 
 @end
@@ -109,7 +108,7 @@
 - (void)setPost:(APPost *)post withSelectedPhoto:(APImageView *)photoToSelect
 {
     postData = post;
-    
+        
     [ownerLabel setText:[post owner]];
     [picView setImage:[post pictureImage]];
     [dateLabel setText:[post date]];

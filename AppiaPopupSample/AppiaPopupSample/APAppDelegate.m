@@ -8,11 +8,19 @@
 
 #import "APAppDelegate.h"
 #import "ECSlidingViewController.h"
+#import <AppiaSDK/Appia.h>
 
 @implementation APAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //initialize Appia
+    AIAppia *appia = [AIAppia sharedInstance];
+    appia.siteId = @"3862";
+    
+    //cache the app wall upon launch to improve performance
+    //[[AIAppia sharedInstance] cacheAppWall];
+    
     // Override point for customization after application launch.
     ECSlidingViewController *slidingVC = (ECSlidingViewController *)self.window.rootViewController;
     

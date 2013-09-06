@@ -11,6 +11,16 @@
 
 @implementation APPost
 
+- (id)init
+{
+    if ((self = [super init]))
+    {
+        [self setType:APPostTypeStandard];
+    }
+    
+    return self;
+}
+
 - (CGFloat)heightForPost
 {
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0];
