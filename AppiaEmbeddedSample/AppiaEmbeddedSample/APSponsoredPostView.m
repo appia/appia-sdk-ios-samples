@@ -50,7 +50,16 @@
         adView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 30.0, postView.frame.size.width - 20.0, 102.0)];
         [adView.layer setBorderColor:[[UIColor colorWithWhite:0.75 alpha:1.0] CGColor]];
         [adView.layer setBorderWidth:2.0];
+        [adView setBackgroundColor:[UIColor colorWithWhite:0.75 alpha:1.0]];
         [postView addSubview:adView];
+        
+        UILabel *adLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, adView.frame.size.width, adView.frame.size.height)];
+        [adLabel setBackgroundColor:[UIColor clearColor]];
+        [adLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:21.0]];
+        [adLabel setTextColor:[UIColor whiteColor]];
+        [adLabel setText:@"More Fun Apps"];
+        [adLabel setTextAlignment:NSTextAlignmentCenter];
+        [adView addSubview:adLabel];
         
         //initialize the app wall
         appWall = [[AIAppia sharedInstance] createAppWall];
@@ -60,22 +69,8 @@
 
 - (void)setPost:(APPost *)post
 {
-    //APSponsoredPost *sponsoredPost = (APSponsoredPost *)post;
-    
     //present the app wall in the ad view
     [appWall presentInView:adView];
-    
-    /*
-    UILabel *adText = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, adView.frame.size.width, adView.frame.size.height)];
-    [adText setBackgroundColor:[UIColor clearColor]];
-    [adText setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:21.0]];
-    [adText setTextColor:[UIColor whiteColor]];
-    [adText setText:@"Tap to find cool new apps!"];
-    [adText setTextAlignment:NSTextAlignmentCenter];
-    [adView addSubview:adText];
-    
-    [adView setBackgroundColor:[UIColor colorWithRed:255.0/255.0 green:150.0/255.0 blue:0.0/255.0 alpha:1.0]];
-     */
 }
 
 - (void)setPostBackgroundColor:(UIColor *)color

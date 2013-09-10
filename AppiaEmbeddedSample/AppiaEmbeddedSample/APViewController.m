@@ -75,7 +75,8 @@
     //[[[self navigationController] navigationBar] setBarTintColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
     //[[[self navigationController] navigationBar] setTranslucent:NO];
     
-    appWallDrawer = [[APDrawerAppWallView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 400.0)];
+    //height of one ad is 102.0; handle is 30pts. 
+    appWallDrawer = [[APDrawerAppWallView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 3 * 102.0 + 30.0)];
     [self.view addSubview:appWallDrawer];
 }
 
@@ -100,7 +101,6 @@
 {
     [super viewWillLayoutSubviews];
     
-    NSLog(@"Hieght: %f", self.view.frame.size.height);
     CGRect f = appWallDrawer.frame;
     [appWallDrawer setFrame:CGRectMake(f.origin.x, self.view.frame.size.height - 30.0, f.size.width, f.size.height)];   
 }

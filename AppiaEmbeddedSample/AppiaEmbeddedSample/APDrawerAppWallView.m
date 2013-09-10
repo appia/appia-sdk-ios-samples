@@ -53,6 +53,10 @@
         
         [appWall presentInView:adView];
         
+        UIView *bg = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.frame.size.height, self.frame.size.width, 300.0)];
+        [bg setBackgroundColor:[UIColor whiteColor]];
+        [self addSubview:bg];
+        
         isClosed = YES;
     }
     return self;
@@ -62,12 +66,8 @@
 {
     [super layoutSubviews];
     
-    NSLog(@"Laying out subviews: %f", self.superview.frame.size.height);
-        
     openYPosition = self.superview.frame.size.height - (self.frame.size.height / 2.0);
     closedYPosition = self.superview.frame.size.height + (self.frame.size.height / 2.0) - handleHeight;
-    
-    NSLog(@"open: %f; closed: %f", openYPosition, closedYPosition);
 }
 
 - (void)handlePan:(UIPanGestureRecognizer *)gr
@@ -84,8 +84,14 @@
             //change my vertical position
             CGPoint delta = [gr translationInView:self];
             
-            CGFloat newY = MIN(MAX(dragPoint.y + delta.y, openYPosition), closedYPosition);
-                        
+            //CGFloat newY = MIN(MAX(dragPoint.y + delta.y, openYPosition), closedYPosition);
+            CGFloat newY = MIN(dragPoint.y + delta.y, closedYPosition);
+            
+            if (newY < openYPosition)
+            {
+                newY = openYPosition - powf(openYPosition - newY, 0.75);
+            }
+            
             [self.layer setPosition:CGPointMake(dragPoint.x, newY)];
 
             break;
@@ -93,8 +99,6 @@
         case UIGestureRecognizerStateEnded:
         case UIGestureRecognizerStateCancelled:
         {
-            NSLog(@"Gesture cancelled");
-            
             //scroll to the finish
             CGFloat finalY;
             if (isClosed)
