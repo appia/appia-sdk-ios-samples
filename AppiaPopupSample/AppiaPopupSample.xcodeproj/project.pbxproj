@@ -15,6 +15,7 @@
 		4106B00717DA1EA50061D736 /* APSponsoredPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4106B00617DA1EA50061D736 /* APSponsoredPostView.m */; };
 		4106B00B17DA307D0061D736 /* APUtilityPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4106B00A17DA307D0061D736 /* APUtilityPost.m */; };
 		4106B00E17DA30CC0061D736 /* APUtilityPostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4106B00D17DA30CC0061D736 /* APUtilityPostView.m */; };
+		4137E5FA17DF57F500C8AF41 /* APModalAppWallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4137E5F917DF57F500C8AF41 /* APModalAppWallView.m */; };
 		413E2F9117D13DE20002FDA6 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 413E2F8717D13DE20002FDA6 /* blue.png */; };
 		413E2F9217D13DE20002FDA6 /* blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 413E2F8817D13DE20002FDA6 /* blue@2x.png */; };
 		413E2F9317D13DE20002FDA6 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 413E2F8917D13DE20002FDA6 /* green.png */; };
@@ -72,6 +73,8 @@
 		4106B00A17DA307D0061D736 /* APUtilityPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APUtilityPost.m; sourceTree = "<group>"; };
 		4106B00C17DA30CB0061D736 /* APUtilityPostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APUtilityPostView.h; sourceTree = "<group>"; };
 		4106B00D17DA30CC0061D736 /* APUtilityPostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APUtilityPostView.m; sourceTree = "<group>"; };
+		4137E5F817DF57F500C8AF41 /* APModalAppWallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APModalAppWallView.h; sourceTree = "<group>"; };
+		4137E5F917DF57F500C8AF41 /* APModalAppWallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APModalAppWallView.m; sourceTree = "<group>"; };
 		413E2F8717D13DE20002FDA6 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		413E2F8817D13DE20002FDA6 /* blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue@2x.png"; sourceTree = "<group>"; };
 		413E2F8917D13DE20002FDA6 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				41A31BEF17CF9BC500E0887A /* APPostViewController.m */,
 				41A31BF017CF9BC500E0887A /* APViewController.h */,
 				41A31BF117CF9BC500E0887A /* APViewController.m */,
+				4137E5F817DF57F500C8AF41 /* APModalAppWallView.h */,
+				4137E5F917DF57F500C8AF41 /* APModalAppWallView.m */,
 				41A31C0317CF9C1B00E0887A /* assets */,
 				41A31BC817CF9B8100E0887A /* Supporting Files */,
 			);
@@ -385,6 +390,7 @@
 				4106B00717DA1EA50061D736 /* APSponsoredPostView.m in Sources */,
 				4106B00B17DA307D0061D736 /* APUtilityPost.m in Sources */,
 				4106B00E17DA30CC0061D736 /* APUtilityPostView.m in Sources */,
+				4137E5FA17DF57F500C8AF41 /* APModalAppWallView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

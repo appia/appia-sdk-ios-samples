@@ -12,6 +12,7 @@
 #import "APPostCell.h"
 #import "APPostViewController.h"
 #import "APImageView.h"
+#import "APModalAppWallView.h"
 #import <AppiaSDK/Appia.h>
 
 @interface APViewController ()
@@ -23,6 +24,8 @@
     
     AIAppWall *appWall;
     BOOL hasShownInitialAppWall;
+    
+    APModalAppWallView *initialAppWallView;
 }
 
 @end
@@ -82,6 +85,9 @@
     [postTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     [postTable setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
     [[self view] addSubview:postTable];
+    
+    //initialize app wall view
+    initialAppWallView = [[APModalAppWallView alloc] initWithFrame:self.view.frame];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -108,7 +114,7 @@
     //open up an app wall the fist time we appear (upon startup of the app)
     if (!hasShownInitialAppWall)
     {
-        [appWall presentFromMainWindow];
+        [initialAppWallView presentAppWallAfterDelay:1.0];
         hasShownInitialAppWall = YES;
     }
     

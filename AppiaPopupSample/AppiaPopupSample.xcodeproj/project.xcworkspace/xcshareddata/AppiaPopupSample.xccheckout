@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BABAC6AB-6D9C-47C8-8B2D-D814E20F54B0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AppiaPopupSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>29F5D2CE-A2A6-49CB-B3E8-85219AA4223F</key>
+		<string>https://bitbucket.org/bwatkins_lgs/appiasampleapps.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AppiaPopupSample/AppiaPopupSample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>29F5D2CE-A2A6-49CB-B3E8-85219AA4223F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/bwatkins_lgs/appiasampleapps.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>29F5D2CE-A2A6-49CB-B3E8-85219AA4223F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>29F5D2CE-A2A6-49CB-B3E8-85219AA4223F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>appiaSampleApps</string>
+		</dict>
+	</array>
+</dict>
+</plist>
