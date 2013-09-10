@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>owner</key>
+		<string>Brian Watkins</string>
+		<key>picture</key>
+		<string>blue.png</string>
+		<key>date</key>
+		<string>August 25, 2013</string>
+		<key>text</key>
+		<string>Downtown Durham is really great! Yesterday I walked all over the place and saw all these cool buildings. Lots of new restaurants are opening too!</string>
+		<key>comments</key>
+		<array>
+			<dict>
+				<key>owner</key>
+				<string>Geoff Berry</string>
+				<key>picture</key>
+				<string>red.png</string>
+				<key>date</key>
+				<string>August 25, 2013</string>
+				<key>text</key>
+				<string>Great post! I agree that downtown Durham is a pretty cool place!</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>owner</key>
+		<string>Ed Holzwarth</string>
+		<key>picture</key>
+		<string>green.png</string>
+		<key>text</key>
+		<string>My favorite video game is Galaga! It&apos;s really fun to play. You should try it!</string>
+		<key>date</key>
+		<string>August 21, 2013</string>
+		<key>comments</key>
+		<array>
+			<dict>
+				<key>owner</key>
+				<string>Geoff Berry</string>
+				<key>picture</key>
+				<string>red.png</string>
+				<key>date</key>
+				<string>August 21, 2013</string>
+				<key>text</key>
+				<string>I really enjoyed this post!</string>
+			</dict>
+			<dict>
+				<key>owner</key>
+				<string>Gloria Watkins</string>
+				<key>picture</key>
+				<string>yellow.png</string>
+				<key>date</key>
+				<string>August 21, 2013</string>
+				<key>text</key>
+				<string>I like video games too!</string>
+			</dict>
+			<dict>
+				<key>owner</key>
+				<string>Brian Watkins</string>
+				<key>picture</key>
+				<string>blue.png</string>
+				<key>date</key>
+				<string>August 21, 2013</string>
+				<key>text</key>
+				<string>I actually like PacMan the best!</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>owner</key>
+		<string>Brian Watkins</string>
+		<key>picture</key>
+		<string>blue.png</string>
+		<key>text</key>
+		<string>Here are some pictures of the food I&apos;ve eaten recently!</string>
+		<key>date</key>
+		<string>August 8, 2013</string>
+		<key>comments</key>
+		<array>
+			<dict>
+				<key>owner</key>
+				<string>Ed Holzwarth</string>
+				<key>picture</key>
+				<string>green.png</string>
+				<key>date</key>
+				<string>August 12, 2013</string>
+				<key>text</key>
+				<string>Looks great!</string>
+			</dict>
+			<dict>
+				<key>owner</key>
+				<string>Geoff Berry</string>
+				<key>picture</key>
+				<string>red.png</string>
+				<key>date</key>
+				<string>August 8, 2013</string>
+				<key>text</key>
+				<string>Awesome pictures! </string>
+			</dict>
+		</array>
+		<key>photos</key>
+		<array>
+			<string>photo_1.png</string>
+			<string>photo_2.png</string>
+			<string>photo_3.png</string>
+		</array>
+	</dict>
+	<dict>
+		<key>owner</key>
+		<string>Brian Watkins</string>
+		<key>picture</key>
+		<string>blue.png</string>
+		<key>text</key>
+		<string>Another fun post!</string>
+		<key>date</key>
+		<string>August 8, 2013</string>
+	</dict>
+	<dict>
+		<key>owner</key>
+		<string>Brian Watkins</string>
+		<key>picture</key>
+		<string>blue.png</string>
+		<key>text</key>
+		<string>Here is my first post!</string>
+		<key>date</key>
+		<string>August 9, 2013</string>
+	</dict>
+</array>
+</plist>
