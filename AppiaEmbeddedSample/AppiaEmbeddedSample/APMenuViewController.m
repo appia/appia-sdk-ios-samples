@@ -14,6 +14,7 @@
 @interface APMenuViewController ()
 {
     AIAppWall *appWall;
+    UIView *appWallView;
 }
 
 @end
@@ -54,7 +55,7 @@
     [[self view] addSubview:menuHolder];
     
 	// Do any additional setup after loading the view.
-    NSArray *menuItems = [NSArray arrayWithObjects:@"Friends", @"Groups", @"Fun stuff", @"More apps", nil];
+    NSArray *menuItems = [NSArray arrayWithObjects:@"Friends", @"Groups", @"Fun stuff", nil];
     
     CGFloat yOffset = 0.0;
     NSInteger tagNumber = 0;
@@ -70,10 +71,45 @@
         yOffset += menuView.frame.size.height + 1.0;
     }
     
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0.0, menuHolder.frame.origin.y + [menuItems count] * 45.0, 270.0, 30.0)];
+    [titleView setBackgroundColor:[UIColor colorWithWhite:0.5 alpha:1.0]];
+    [[self view] addSubview:titleView];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, 250.0, 30.0)];
+    [titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:12.0]];
+    [titleLabel setTextColor:[UIColor whiteColor]];
+    [titleLabel setBackgroundColor:[UIColor clearColor]];
+    [titleLabel setText:@"More Fun Apps"];
+    [titleLabel setTextAlignment:NSTextAlignmentRight];
+    [titleView addSubview:titleLabel];
+    
+    //a view for the app wall
+    appWallView = [[UIView alloc] initWithFrame:CGRectMake(-2.0, titleView.frame.origin.y + titleView.frame.size.height - 2.0, 274.0, 300.0)];
+    [appWallView setBackgroundColor:[UIColor redColor]];
+    [[self view] addSubview:appWallView];
+    
+    [[self view] bringSubviewToFront:titleView];
+    
     //sep
-    UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(0.0, menuHolder.frame.origin.y, self.view.frame.size.width, 1.0)];
-    [sep setBackgroundColor:[UIColor colorWithWhite:0.4 alpha:1.0]];
+    UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(0.0, titleView.frame.origin.y, self.view.frame.size.width, 1.0)];
+    [sep setBackgroundColor:[UIColor colorWithWhite:0.0 alpha:1.0]];
     [[self view] addSubview:sep];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [appWall presentInView:appWallView];
+}
+
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    
+    CGRect f = appWallView.frame;
+    [appWallView setFrame:CGRectMake(f.origin.x, f.origin.y, f.size.width, self.view.frame.size.height - f.origin.y + 2.0)];
     
 }
 
