@@ -71,11 +71,11 @@
         yOffset += menuView.frame.size.height + 1.0;
     }
     
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0.0, menuHolder.frame.origin.y + [menuItems count] * 45.0, 270.0, 30.0)];
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0.0, menuHolder.frame.origin.y + [menuItems count] * 45.0, 290.0, 30.0)];
     [titleView setBackgroundColor:[UIColor colorWithWhite:0.5 alpha:1.0]];
     [[self view] addSubview:titleView];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 0.0, 250.0, 30.0)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, titleView.frame.size.width, 30.0)];
     [titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:12.0]];
     [titleLabel setTextColor:[UIColor whiteColor]];
     [titleLabel setBackgroundColor:[UIColor clearColor]];
@@ -84,7 +84,9 @@
     [titleView addSubview:titleLabel];
     
     //a view for the app wall
-    appWallView = [[UIView alloc] initWithFrame:CGRectMake(-2.0, titleView.frame.origin.y + titleView.frame.size.height - 2.0, 274.0, 300.0)];
+    appWallView = [[UIView alloc] initWithFrame:CGRectMake(0.0, titleView.frame.origin.y + titleView.frame.size.height - 2.0, 290.0, 300.0)];
+    [appWallView.layer setBorderColor:[[UIColor colorWithWhite:0.5 alpha:1.0] CGColor]];
+    [appWallView.layer setBorderWidth:2.0];
     [appWallView setBackgroundColor:[UIColor redColor]];
     [[self view] addSubview:appWallView];
     

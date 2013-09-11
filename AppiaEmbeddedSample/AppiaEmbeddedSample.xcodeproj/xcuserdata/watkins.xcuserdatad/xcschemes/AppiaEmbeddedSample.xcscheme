@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4137E60317DF694800C8AF41"
-               BuildableName = "AppiaEmbeddedSample.app"
+               BuildableName = "AppiaEmbed.app"
                BlueprintName = "AppiaEmbeddedSample"
                ReferencedContainer = "container:AppiaEmbeddedSample.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4137E60317DF694800C8AF41"
-            BuildableName = "AppiaEmbeddedSample.app"
+            BuildableName = "AppiaEmbed.app"
             BlueprintName = "AppiaEmbeddedSample"
             ReferencedContainer = "container:AppiaEmbeddedSample.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4137E60317DF694800C8AF41"
-            BuildableName = "AppiaEmbeddedSample.app"
+            BuildableName = "AppiaEmbed.app"
             BlueprintName = "AppiaEmbeddedSample"
             ReferencedContainer = "container:AppiaEmbeddedSample.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4137E60317DF694800C8AF41"
-            BuildableName = "AppiaEmbeddedSample.app"
+            BuildableName = "AppiaEmbed.app"
             BlueprintName = "AppiaEmbeddedSample"
             ReferencedContainer = "container:AppiaEmbeddedSample.xcodeproj">
          </BuildableReference>

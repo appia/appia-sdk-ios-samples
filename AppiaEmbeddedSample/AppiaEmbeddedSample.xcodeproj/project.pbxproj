@@ -499,7 +499,7 @@
 		4137E62817DF694800C8AF41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Appia, Inc (QD9GMJV5NA)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Joel Brian Watkins (7VNRE65HS4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -509,7 +509,7 @@
 				INFOPLIST_FILE = "AppiaEmbeddedSample/AppiaEmbeddedSample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = AppiaEmbed;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "987826B8-48B2-4CE8-AB20-F9087CFF4F0B";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

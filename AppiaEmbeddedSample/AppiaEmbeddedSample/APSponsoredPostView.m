@@ -47,7 +47,8 @@
         [postView addSubview:l];
         
         //an area for the ad
-        adView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 38.0, self.frame.size.width, 250.0)];
+        //adView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 38.0, self.frame.size.width, 250.0)];
+        adView = [[UIView alloc] initWithFrame:CGRectMake(15.0, 38.0, 290.0, 250.0)];
         [adView.layer setBorderColor:[[UIColor colorWithWhite:0.75 alpha:1.0] CGColor]];
         [adView.layer setBorderWidth:2.0];
         [adView setBackgroundColor:[UIColor colorWithWhite:0.75 alpha:1.0]];

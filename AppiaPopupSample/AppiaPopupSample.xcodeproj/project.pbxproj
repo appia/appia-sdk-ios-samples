@@ -85,7 +85,7 @@
 		413E2F8E17D13DE20002FDA6 /* red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red@2x.png"; sourceTree = "<group>"; };
 		413E2F8F17D13DE20002FDA6 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		413E2F9017D13DE20002FDA6 /* yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow@2x.png"; sourceTree = "<group>"; };
-		41A31BBE17CF9B8100E0887A /* AppiaPopupSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppiaPopupSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A31BBE17CF9B8100E0887A /* AppiaPopup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppiaPopup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A31BC117CF9B8100E0887A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		41A31BC317CF9B8100E0887A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		41A31BC517CF9B8100E0887A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -167,7 +167,7 @@
 		41A31BBF17CF9B8100E0887A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41A31BBE17CF9B8100E0887A /* AppiaPopupSample.app */,
+				41A31BBE17CF9B8100E0887A /* AppiaPopup.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 			);
 			name = AppiaPopupSample;
 			productName = AppiaPopupSample;
-			productReference = 41A31BBE17CF9B8100E0887A /* AppiaPopupSample.app */;
+			productReference = 41A31BBE17CF9B8100E0887A /* AppiaPopup.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -475,6 +475,7 @@
 		41A31BE217CF9B8100E0887A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Appia, Inc (QD9GMJV5NA)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -483,7 +484,8 @@
 				GCC_PREFIX_HEADER = "AppiaPopupSample/AppiaPopupSample-Prefix.pch";
 				INFOPLIST_FILE = "AppiaPopupSample/AppiaPopupSample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AppiaPopup;
+				PROVISIONING_PROFILE = "9599DF87-31D8-497A-9279-A8DCFA35C6A7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -491,6 +493,7 @@
 		41A31BE317CF9B8100E0887A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Appia, Inc (QD9GMJV5NA)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -499,7 +502,8 @@
 				GCC_PREFIX_HEADER = "AppiaPopupSample/AppiaPopupSample-Prefix.pch";
 				INFOPLIST_FILE = "AppiaPopupSample/AppiaPopupSample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AppiaPopup;
+				PROVISIONING_PROFILE = "9599DF87-31D8-497A-9279-A8DCFA35C6A7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

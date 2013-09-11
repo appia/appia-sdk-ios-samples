@@ -31,20 +31,25 @@
         // Initialization code
         appWall = [[AIAppia sharedInstance] createAppWall];
         
-        handleHeight = 47.0;
+        handleHeight = 60.0;
                 
         //a view for the 'handle' to the drawer
-        UIImageView *handleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bar.png"]];
-        [handleView setUserInteractionEnabled:YES];
+        UIView *handleView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, handleHeight)];
+        [self setBackgroundColor:[UIColor clearColor]];
         [self addSubview:handleView];
         
+        UIImageView *handleViewImg = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 13.0, 320.0, 47.0)];
+        [handleViewImg setImage:[UIImage imageNamed:@"bar.png"]];
+        [handleViewImg setUserInteractionEnabled:YES];
+        [handleView addSubview:handleViewImg];
+        
         //an arrow indicator
-        arrowView = [[UIImageView alloc] initWithFrame:CGRectMake(260.0, 5.0, 36.0, 11.0)];
+        arrowView = [[UIImageView alloc] initWithFrame:CGRectMake(260.0, 18.0, 36.0, 11.0)];
         [arrowView setImage:[UIImage imageNamed:@"arrow.png"]];
         [handleView addSubview:arrowView];
         
         //label for more apps
-        UILabel *appsLabel = [[UILabel alloc] initWithFrame:CGRectMake(243.0, 10.0, 70.0, 25.0)];
+        UILabel *appsLabel = [[UILabel alloc] initWithFrame:CGRectMake(243.0, 23.0, 70.0, 25.0)];
         //UILabel *appsLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 23.0, 320.0, 25.0)];
         [appsLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:9.0]];
         [appsLabel setTextColor:[UIColor colorWithWhite:0.75 alpha:1.0]];
@@ -58,14 +63,20 @@
         [handleView addGestureRecognizer:pan];
         
         //a view to contain the AppWall
+        UIView *adHolder = [[UIView alloc] initWithFrame:CGRectMake(0.0, handleView.frame.size.height,
+                                                                    self.frame.size.width, self.frame.size.height - handleView.frame.size.height)];
+        [adHolder setBackgroundColor:[UIColor whiteColor]];
+        [adHolder.layer setBorderWidth:2.0];
+        [adHolder.layer setBorderColor:[[UIColor colorWithRed:65.0/255.0 green:65.0/255.0 blue:65.0/255.0 alpha:1.0] CGColor]];
+        [self addSubview:adHolder];
+        
         UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(0.0,
-                                                                  handleView.frame.size.height,
-                                                                  self.frame.size.width,
+                                                                  0.0,
+                                                                  adHolder.frame.size.width,
                                                                   self.frame.size.height - handleView.frame.size.height)];
         [adView.layer setBorderWidth:2.0];
-        [adView.layer setBorderColor:[[UIColor colorWithRed:65.0/255.0 green:65.0/255.0 blue:65.0/255.0 alpha:1.0] CGColor]];
-        [adView setBackgroundColor:[UIColor darkGrayColor]];
-        [self addSubview:adView];
+        [adView.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+        [adHolder addSubview:adView];
         
         [appWall presentInView:adView];
         
@@ -92,6 +103,7 @@
     {
         case UIGestureRecognizerStateBegan:
         {
+            NSLog(@"Drag began!");
             dragPoint = [self.layer position];
             break;
         }
@@ -151,7 +163,6 @@
             
     }
 }
-
 
 
 /*

@@ -28,7 +28,7 @@
     
     [slidingVC setTopViewController:topVC];
     [slidingVC setResetStrategy:ECPanning|ECTapping];
-    [slidingVC setAnchorRightPeekAmount:50.0];
+    [slidingVC setAnchorRightPeekAmount:30.0];
     
     return YES;
 }
