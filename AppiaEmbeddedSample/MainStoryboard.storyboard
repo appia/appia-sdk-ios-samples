@@ -63,7 +63,7 @@
                             <constraint firstItem="sNB-Ln-R43" firstAttribute="top" secondItem="dw6-nj-qeh" secondAttribute="top" type="user" id="6Y2-bG-JmC"/>
                             <constraint firstItem="sNB-Ln-R43" firstAttribute="trailing" secondItem="dw6-nj-qeh" secondAttribute="trailing" type="user" id="8NJ-t5-ahe"/>
                             <constraint firstItem="sNB-Ln-R43" firstAttribute="leading" secondItem="dw6-nj-qeh" secondAttribute="leading" type="user" id="OxZ-Cz-Bc4"/>
-                            <constraint firstAttribute="bottom" secondItem="sNB-Ln-R43" secondAttribute="bottom" constant="30" type="user" id="T7D-T8-2CX"/>
+                            <constraint firstAttribute="bottom" secondItem="sNB-Ln-R43" secondAttribute="bottom" constant="20" type="user" id="T7D-T8-2CX"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

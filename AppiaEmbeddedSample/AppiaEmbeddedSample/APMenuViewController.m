@@ -80,7 +80,7 @@
     [titleLabel setTextColor:[UIColor whiteColor]];
     [titleLabel setBackgroundColor:[UIColor clearColor]];
     [titleLabel setText:@"More Fun Apps"];
-    [titleLabel setTextAlignment:NSTextAlignmentRight];
+    [titleLabel setTextAlignment:NSTextAlignmentCenter];
     [titleView addSubview:titleLabel];
     
     //a view for the app wall

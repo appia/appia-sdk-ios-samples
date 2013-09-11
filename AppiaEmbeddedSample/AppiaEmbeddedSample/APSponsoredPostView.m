@@ -43,15 +43,15 @@
         [l setBackgroundColor:[UIColor clearColor]];
         [l setFont:[UIFont fontWithName:@"HelveticaNeue" size:13.0]];
         [l setTextColor:[UIColor darkGrayColor]];
-        [l setText:@"Sponsored Post"];
+        [l setText:@"Sponsored Post: More Apps"];
         [postView addSubview:l];
         
         //an area for the ad
-        adView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 30.0, postView.frame.size.width - 20.0, 102.0)];
+        adView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 38.0, self.frame.size.width, 250.0)];
         [adView.layer setBorderColor:[[UIColor colorWithWhite:0.75 alpha:1.0] CGColor]];
         [adView.layer setBorderWidth:2.0];
         [adView setBackgroundColor:[UIColor colorWithWhite:0.75 alpha:1.0]];
-        [postView addSubview:adView];
+        [self addSubview:adView];
         
         UILabel *adLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, adView.frame.size.width, adView.frame.size.height)];
         [adLabel setBackgroundColor:[UIColor clearColor]];

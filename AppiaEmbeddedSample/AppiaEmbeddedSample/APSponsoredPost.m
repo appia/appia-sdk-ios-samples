@@ -22,7 +22,7 @@
 
 - (CGFloat)heightForPost
 {
-    return 102.0 + 58.0;
+    return 250.0 + 58.0;
 }
 
 @end

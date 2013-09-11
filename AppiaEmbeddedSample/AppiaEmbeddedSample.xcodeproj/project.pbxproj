@@ -58,10 +58,16 @@
 		4137E69417DF6A9D00C8AF41 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4137E69317DF6A9D00C8AF41 /* AdSupport.framework */; };
 		4137E69617DF6AD700C8AF41 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4137E69517DF6AD700C8AF41 /* MainStoryboard.storyboard */; };
 		4137E69917DF796F00C8AF41 /* APDrawerAppWallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4137E69817DF796E00C8AF41 /* APDrawerAppWallView.m */; };
+		41AF82AB17E0B20F001434C4 /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF82A517E0B20F001434C4 /* arrow_down.png */; };
+		41AF82AC17E0B20F001434C4 /* arrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF82A617E0B20F001434C4 /* arrow_down@2x.png */; };
+		41AF82AD17E0B20F001434C4 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF82A717E0B20F001434C4 /* arrow.png */; };
+		41AF82AE17E0B20F001434C4 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF82A817E0B20F001434C4 /* arrow@2x.png */; };
+		41AF82AF17E0B20F001434C4 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF82A917E0B20F001434C4 /* bar.png */; };
+		41AF82B017E0B20F001434C4 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF82AA17E0B20F001434C4 /* bar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4137E60417DF694800C8AF41 /* AppiaEmbeddedSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppiaEmbeddedSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4137E60417DF694800C8AF41 /* AppiaEmbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppiaEmbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4137E60717DF694800C8AF41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4137E60917DF694800C8AF41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4137E60B17DF694800C8AF41 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,6 +145,12 @@
 		4137E69517DF6AD700C8AF41 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4137E69717DF796E00C8AF41 /* APDrawerAppWallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDrawerAppWallView.h; sourceTree = "<group>"; };
 		4137E69817DF796E00C8AF41 /* APDrawerAppWallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDrawerAppWallView.m; sourceTree = "<group>"; };
+		41AF82A517E0B20F001434C4 /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down.png; sourceTree = "<group>"; };
+		41AF82A617E0B20F001434C4 /* arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_down@2x.png"; sourceTree = "<group>"; };
+		41AF82A717E0B20F001434C4 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		41AF82A817E0B20F001434C4 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		41AF82A917E0B20F001434C4 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+		41AF82AA17E0B20F001434C4 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +184,7 @@
 		4137E60517DF694800C8AF41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4137E60417DF694800C8AF41 /* AppiaEmbeddedSample.app */,
+				4137E60417DF694800C8AF41 /* AppiaEmbed.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,6 +271,12 @@
 		4137E68B17DF6A0C00C8AF41 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				41AF82A517E0B20F001434C4 /* arrow_down.png */,
+				41AF82A617E0B20F001434C4 /* arrow_down@2x.png */,
+				41AF82A717E0B20F001434C4 /* arrow.png */,
+				41AF82A817E0B20F001434C4 /* arrow@2x.png */,
+				41AF82A917E0B20F001434C4 /* bar.png */,
+				41AF82AA17E0B20F001434C4 /* bar@2x.png */,
 				4137E62A17DF69BB00C8AF41 /* add_button.png */,
 				4137E62B17DF69BB00C8AF41 /* add_button@2x.png */,
 				4137E65317DF69D200C8AF41 /* blue.png */,
@@ -307,7 +325,7 @@
 			);
 			name = AppiaEmbeddedSample;
 			productName = AppiaEmbeddedSample;
-			productReference = 4137E60417DF694800C8AF41 /* AppiaEmbeddedSample.app */;
+			productReference = 4137E60417DF694800C8AF41 /* AppiaEmbed.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -366,6 +384,12 @@
 				4137E68A17DF69F400C8AF41 /* yellow@2x.png in Resources */,
 				4137E68F17DF6A6C00C8AF41 /* AppiaSDK.bundle in Resources */,
 				4137E69617DF6AD700C8AF41 /* MainStoryboard.storyboard in Resources */,
+				41AF82AB17E0B20F001434C4 /* arrow_down.png in Resources */,
+				41AF82AC17E0B20F001434C4 /* arrow_down@2x.png in Resources */,
+				41AF82AD17E0B20F001434C4 /* arrow.png in Resources */,
+				41AF82AE17E0B20F001434C4 /* arrow@2x.png in Resources */,
+				41AF82AF17E0B20F001434C4 /* bar.png in Resources */,
+				41AF82B017E0B20F001434C4 /* bar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +465,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = AppiaEmbed;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -465,6 +490,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = AppiaEmbed;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -473,6 +499,7 @@
 		4137E62817DF694800C8AF41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Appia, Inc (QD9GMJV5NA)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -481,7 +508,8 @@
 				GCC_PREFIX_HEADER = "AppiaEmbeddedSample/AppiaEmbeddedSample-Prefix.pch";
 				INFOPLIST_FILE = "AppiaEmbeddedSample/AppiaEmbeddedSample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AppiaEmbed;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -489,6 +517,7 @@
 		4137E62917DF694800C8AF41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Appia, Inc (QD9GMJV5NA)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -497,7 +526,8 @@
 				GCC_PREFIX_HEADER = "AppiaEmbeddedSample/AppiaEmbeddedSample-Prefix.pch";
 				INFOPLIST_FILE = "AppiaEmbeddedSample/AppiaEmbeddedSample-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AppiaEmbed;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -521,6 +551,7 @@
 				4137E62917DF694800C8AF41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -76,7 +76,7 @@
     //[[[self navigationController] navigationBar] setTranslucent:NO];
     
     //height of one ad is 102.0; handle is 30pts. 
-    appWallDrawer = [[APDrawerAppWallView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 3 * 102.0 + 30.0)];
+    appWallDrawer = [[APDrawerAppWallView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 350.0 + 47.0)];
     [self.view addSubview:appWallDrawer];
 }
 
@@ -102,7 +102,7 @@
     [super viewWillLayoutSubviews];
     
     CGRect f = appWallDrawer.frame;
-    [appWallDrawer setFrame:CGRectMake(f.origin.x, self.view.frame.size.height - 30.0, f.size.width, f.size.height)];   
+    [appWallDrawer setFrame:CGRectMake(f.origin.x, self.view.frame.size.height - 47.0, f.size.width, f.size.height)];
 }
 
 - (void)viewDidAppear:(BOOL)animated
