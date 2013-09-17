@@ -9,6 +9,7 @@
 #import "APSponsoredPostView.h"
 #import "APPost.h"
 #import "APSponsoredPost.h"
+#import "APFakeAppWall.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AppiaSDK/Appia.h>
 
@@ -16,6 +17,7 @@
 {
     UIView *postView, *adView;
     AIAppWall *appWall;
+    APFakeAppWall *fakeAppWall;
 }
 
 @end
@@ -64,6 +66,7 @@
         
         //initialize the app wall
         appWall = [[AIAppia sharedInstance] createAppWall];
+        //fakeAppWall = [[APFakeAppWall alloc] init];
     }
     return self;
 }
@@ -72,6 +75,7 @@
 {
     //present the app wall in the ad view
     [appWall presentInView:adView];
+    //[fakeAppWall presentInView:adView];
 }
 
 - (void)setPostBackgroundColor:(UIColor *)color

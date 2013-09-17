@@ -9,11 +9,13 @@
 #import "APMenuViewController.h"
 #import "APMenuView.h"
 #import "ECSlidingViewController.h"
+#import "APFakeAppWall.h"
 #import <AppiaSDK/Appia.h>
 
 @interface APMenuViewController ()
 {
     AIAppWall *appWall;
+    APFakeAppWall *fakeAppWall;
     UIView *appWallView;
 }
 
@@ -38,6 +40,7 @@
     
     //create the app wall object
     appWall = [[AIAppia sharedInstance] createAppWall];
+    //fakeAppWall = [[APFakeAppWall alloc] init];
     
     //name view
     UIImageView *faceImg = [[UIImageView alloc] initWithFrame:CGRectMake(10.0, 10.0, 50.0, 50.0)];
@@ -104,6 +107,7 @@
     [super viewWillAppear:animated];
     
     [appWall presentInView:appWallView];
+    //[fakeAppWall presentInView:appWallView];
 }
 
 - (void)viewWillLayoutSubviews

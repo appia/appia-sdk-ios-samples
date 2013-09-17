@@ -58,6 +58,8 @@
 		4137E69417DF6A9D00C8AF41 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4137E69317DF6A9D00C8AF41 /* AdSupport.framework */; };
 		4137E69617DF6AD700C8AF41 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4137E69517DF6AD700C8AF41 /* MainStoryboard.storyboard */; };
 		4137E69917DF796F00C8AF41 /* APDrawerAppWallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4137E69817DF796E00C8AF41 /* APDrawerAppWallView.m */; };
+		4195E49717E21F0D00766AA8 /* APFakeAppWall.m in Sources */ = {isa = PBXBuildFile; fileRef = 4195E49617E21F0D00766AA8 /* APFakeAppWall.m */; };
+		4195E49917E2202300766AA8 /* fake_appwall.html in Resources */ = {isa = PBXBuildFile; fileRef = 4195E49817E2202300766AA8 /* fake_appwall.html */; };
 		41AF82AB17E0B20F001434C4 /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF82A517E0B20F001434C4 /* arrow_down.png */; };
 		41AF82AC17E0B20F001434C4 /* arrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF82A617E0B20F001434C4 /* arrow_down@2x.png */; };
 		41AF82AD17E0B20F001434C4 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF82A717E0B20F001434C4 /* arrow.png */; };
@@ -145,6 +147,9 @@
 		4137E69517DF6AD700C8AF41 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4137E69717DF796E00C8AF41 /* APDrawerAppWallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDrawerAppWallView.h; sourceTree = "<group>"; };
 		4137E69817DF796E00C8AF41 /* APDrawerAppWallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDrawerAppWallView.m; sourceTree = "<group>"; };
+		4195E49517E21F0D00766AA8 /* APFakeAppWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APFakeAppWall.h; sourceTree = "<group>"; };
+		4195E49617E21F0D00766AA8 /* APFakeAppWall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APFakeAppWall.m; sourceTree = "<group>"; };
+		4195E49817E2202300766AA8 /* fake_appwall.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fake_appwall.html; sourceTree = "<group>"; };
 		41AF82A517E0B20F001434C4 /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down.png; sourceTree = "<group>"; };
 		41AF82A617E0B20F001434C4 /* arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_down@2x.png"; sourceTree = "<group>"; };
 		41AF82A717E0B20F001434C4 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
@@ -223,6 +228,8 @@
 				4137E63A17DF69BB00C8AF41 /* APModalAppWallView.m */,
 				4137E69717DF796E00C8AF41 /* APDrawerAppWallView.h */,
 				4137E69817DF796E00C8AF41 /* APDrawerAppWallView.m */,
+				4195E49517E21F0D00766AA8 /* APFakeAppWall.h */,
+				4195E49617E21F0D00766AA8 /* APFakeAppWall.m */,
 				4137E64417DF69D100C8AF41 /* APPostView.h */,
 				4137E64517DF69D100C8AF41 /* APPostView.m */,
 				4137E64617DF69D100C8AF41 /* APPostViewController.h */,
@@ -271,6 +278,7 @@
 		4137E68B17DF6A0C00C8AF41 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				4195E49817E2202300766AA8 /* fake_appwall.html */,
 				41AF82A517E0B20F001434C4 /* arrow_down.png */,
 				41AF82A617E0B20F001434C4 /* arrow_down@2x.png */,
 				41AF82A717E0B20F001434C4 /* arrow.png */,
@@ -390,6 +398,7 @@
 				41AF82AE17E0B20F001434C4 /* arrow@2x.png in Resources */,
 				41AF82AF17E0B20F001434C4 /* bar.png in Resources */,
 				41AF82B017E0B20F001434C4 /* bar@2x.png in Resources */,
+				4195E49917E2202300766AA8 /* fake_appwall.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +430,7 @@
 				4137E67B17DF69F400C8AF41 /* ECSlidingViewController.m in Sources */,
 				4137E68817DF69F400C8AF41 /* UIImage+ImageWithUIView.m in Sources */,
 				4137E69917DF796F00C8AF41 /* APDrawerAppWallView.m in Sources */,
+				4195E49717E21F0D00766AA8 /* APFakeAppWall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,14 @@
 //
 
 #import "APDrawerAppWallView.h"
+#import "APFakeAppWall.h"
 #import <QuartzCore/QuartzCore.h>
 #import <AppiaSDK/Appia.h>
 
 @interface APDrawerAppWallView ()
 {
     AIAppWall *appWall;
+    APFakeAppWall *fakeAppWall;
     CGPoint dragPoint;
     CGFloat handleHeight, openYPosition, closedYPosition;
     BOOL isClosed;
@@ -30,6 +32,7 @@
     {
         // Initialization code
         appWall = [[AIAppia sharedInstance] createAppWall];
+        //fakeAppWall = [[APFakeAppWall alloc] init];
         
         handleHeight = 60.0;
                 
@@ -70,15 +73,23 @@
         [adHolder.layer setBorderColor:[[UIColor colorWithRed:65.0/255.0 green:65.0/255.0 blue:65.0/255.0 alpha:1.0] CGColor]];
         [self addSubview:adHolder];
         
+        /*
         UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(0.0,
                                                                   0.0,
                                                                   adHolder.frame.size.width,
                                                                   self.frame.size.height - handleView.frame.size.height)];
-        [adView.layer setBorderWidth:2.0];
+*/
+        UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(15.0,
+                                                                  0.0,
+                                                                  290.0,
+                                                                  self.frame.size.height - handleView.frame.size.height)];
+
+         [adView.layer setBorderWidth:2.0];
         [adView.layer setBorderColor:[[UIColor whiteColor] CGColor]];
         [adHolder addSubview:adView];
         
         [appWall presentInView:adView];
+        //[fakeAppWall presentInView:adView];
         
         UIView *bg = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.frame.size.height, self.frame.size.width, 300.0)];
         [bg setBackgroundColor:[UIColor colorWithRed:65.0/255.0 green:65.0/255.0 blue:65.0/255.0 alpha:1.0]];
