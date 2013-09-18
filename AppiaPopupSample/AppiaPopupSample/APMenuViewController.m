@@ -38,20 +38,24 @@
     //create the app wall object
     appWall = [[AIAppia sharedInstance] createAppWall];
     
+    UIView *root = [[UIView alloc] initWithFrame:CGRectMake(0.0, 20.0, 320.0, self.view.frame.size.height)];
+    [root setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+    [[self view] addSubview:root];
+    
     //name view
     UIImageView *faceImg = [[UIImageView alloc] initWithFrame:CGRectMake(10.0, 10.0, 50.0, 50.0)];
     [faceImg setImage:[UIImage imageNamed:@"blue.png"]];
-    [[self view] addSubview:faceImg];
+    [root addSubview:faceImg];
     
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(65.0, 40.0, 150.0, 20.0)];
     [nameLabel setBackgroundColor:[UIColor clearColor]];
     [nameLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:13.0]];
     [nameLabel setTextColor:[UIColor whiteColor]];
     [nameLabel setText:@"Brian Watkins"];
-    [[self view] addSubview:nameLabel];
+    [root addSubview:nameLabel];
     
     UIView *menuHolder = [[UIView alloc] initWithFrame:CGRectMake(0.0, 70.0, 320.0, self.view.frame.size.height)];
-    [[self view] addSubview:menuHolder];
+    [root addSubview:menuHolder];
     
 	// Do any additional setup after loading the view.
     NSArray *menuItems = [NSArray arrayWithObjects:@"Friends", @"Groups", @"Fun stuff", @"More apps", nil];
@@ -73,7 +77,7 @@
     //sep
     UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(0.0, menuHolder.frame.origin.y, self.view.frame.size.width, 1.0)];
     [sep setBackgroundColor:[UIColor colorWithWhite:0.4 alpha:1.0]];
-    [[self view] addSubview:sep];
+    [root addSubview:sep];
     
 }
 

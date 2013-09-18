@@ -41,7 +41,9 @@
     
     [[self view] setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
     
-    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height - 44.0)];
+    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)];
+    [scrollView setContentInset:UIEdgeInsetsMake(64.0, 0.0, 0.0, 0.0)];
+    [scrollView setScrollIndicatorInsets:UIEdgeInsetsMake(64.0, 0.0, 0.0, 0.0)];
     [scrollView setAlwaysBounceVertical:YES];
     [[self view] addSubview:scrollView];
     
@@ -67,8 +69,25 @@
 {
     [super viewDidAppear:animated];
     
-    //show the banner ad
+    //show the banner ad -- hide the status bar since this is a full screen ad
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     [bannerAd presentFromMainWindow];
+    
+    //obtain the banner ad view and add an observer on alpha value so we can know when it has been dismissed
+    UIWindow *mainWindow = [[UIApplication sharedApplication] keyWindow];
+    UIView *bannerView = [[mainWindow subviews] objectAtIndex:1];
+    [bannerView addObserver:self forKeyPath:@"alpha" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    NSNumber *alpha = [change objectForKey:NSKeyValueChangeNewKey];
+    if (alpha.floatValue == 0.0)
+    {
+        //the ad has been hidden (and will be removed from the main window
+        //so reveal the status bar once again
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+    }
 }
 
 - (void)didReceiveMemoryWarning

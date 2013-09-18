@@ -49,7 +49,7 @@
     UIButton *b = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 50.0, 50.0)];
     [b setImage:[UIImage imageNamed:@"menu_button.png"] forState:UIControlStateNormal];
     [b addTarget:self action:@selector(showMenu:) forControlEvents:UIControlEventTouchUpInside];
-    [b setImageEdgeInsets:UIEdgeInsetsMake(0.0, -3.0, 0.0, 3.0)];
+    [b setImageEdgeInsets:UIEdgeInsetsMake(0.0, -13.0, 0.0, 13.0)];
     [b setShowsTouchWhenHighlighted:YES];
     
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithCustomView:b];
@@ -58,7 +58,7 @@
     UIButton *a = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 50.0, 50.0)];
     [a setImage:[UIImage imageNamed:@"add_button.png"] forState:UIControlStateNormal];
     //[b addTarget:self action:@selector(ad:) forControlEvents:UIControlEventTouchUpInside];
-    [a setImageEdgeInsets:UIEdgeInsetsMake(0.0, 3.0, 0.0, -3.0)];
+    [a setImageEdgeInsets:UIEdgeInsetsMake(0.0, 13.0, 0.0, -13.0)];
     [a setShowsTouchWhenHighlighted:YES];
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithCustomView:a];
@@ -71,13 +71,14 @@
                                                                   action:nil];
     [[self navigationItem] setBackBarButtonItem:backButton];
     
-    //for iOS 7
-    //[[[self navigationController] navigationBar] setBarTintColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
-    //[[[self navigationController] navigationBar] setTranslucent:NO];
-    
     //height of one ad is 102.0; handle is 30pts. 
     appWallDrawer = [[APDrawerAppWallView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 350.0 + 60.0)];
     [self.view addSubview:appWallDrawer];
+    
+    //set nav bar tint color
+    [[[self navigationController] navigationBar] setBarTintColor:[UIColor colorWithRed:32.0/255.0 green:145.0/255.0 blue:188.0/255.0 alpha:1.0]];
+    [[[self navigationController] navigationBar] setTintColor:[UIColor whiteColor]];
+    [[[self navigationController] navigationBar] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:14.0/255.0 green:68.0/255.0 blue:89.0/255.0 alpha:1.0]}];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -129,6 +130,9 @@
     
     //present the view controller for viewing a post
     APPostViewController *postVC = [segue destinationViewController];
+    
+    NSLog(@"Selected index row: %i", [selectedPostIndex row]);
+    
     [postVC setPost:[posts objectAtIndex:[selectedPostIndex row]]];
     
     if (selectedPhoto)
@@ -196,8 +200,8 @@
     {
         case APPostTypeStandard:
         {
-            [self performSegueWithIdentifier:@"seguePostView" sender:self];
             selectedPostIndex = indexPath;
+            [self performSegueWithIdentifier:@"seguePostView" sender:self];
 
             break;
         }

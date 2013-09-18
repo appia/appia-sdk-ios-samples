@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BABAC6AB-6D9C-47C8-8B2D-D814E20F54B0</string>
+	<string>1A82C890-58E7-4321-B0F0-2F1E6952CC55</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AppiaPopupSample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>29F5D2CE-A2A6-49CB-B3E8-85219AA4223F</key>
-		<string>https://bitbucket.org/bwatkins_lgs/appiasampleapps.git</string>
+		<key>4337CB1A-06FB-4067-A0C7-C41461235E56</key>
+		<string>https://bitbucket.org/littlegreensoftware/appiasampleapps.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>AppiaPopupSample/AppiaPopupSample.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>29F5D2CE-A2A6-49CB-B3E8-85219AA4223F</key>
+		<key>4337CB1A-06FB-4067-A0C7-C41461235E56</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/bwatkins_lgs/appiasampleapps.git</string>
+	<string>https://bitbucket.org/littlegreensoftware/appiasampleapps.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>29F5D2CE-A2A6-49CB-B3E8-85219AA4223F</string>
+	<string>4337CB1A-06FB-4067-A0C7-C41461235E56</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>29F5D2CE-A2A6-49CB-B3E8-85219AA4223F</string>
+			<string>4337CB1A-06FB-4067-A0C7-C41461235E56</string>
 			<key>IDESourceControlWCCName</key>
 			<string>appiaSampleApps</string>
 		</dict>

@@ -36,15 +36,22 @@
     //add the view to the main window
     [[[UIApplication sharedApplication] keyWindow] addSubview:self];
     
+    //add a view to cover the status bar
+    UIView *statusBarView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 20.0)];
+    [statusBarView setBackgroundColor:[UIColor clearColor]];
+    [self addSubview:statusBarView];
+    
     //add the app wall to a view we can slide into place
-    [appWall presentInView:self];
+    UIView *adView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 20.0, 320.0, self.frame.size.height)];
+    [self addSubview:adView];
+    [appWall presentInView:adView];
     
     //add a cancel button in the top right corner
     UIButton *dismissButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 44.0, 44.0)];
     [dismissButton setCenter:CGPointMake(CGRectGetMaxX(self.frame) - 4.0 - 22.0, 26.0)];
     [dismissButton setImage:[UIImage imageNamed:@"AppiaSDK.bundle/close_active.png"] forState:UIControlStateNormal];
     [dismissButton addTarget:self action:@selector(dismissModalAppWall) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:dismissButton];
+    [adView addSubview:dismissButton];
     
     //present the app wall modally after a short delay
     [self performSelector:@selector(presentModalAppWall) withObject:nil afterDelay:delay];

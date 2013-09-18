@@ -30,6 +30,8 @@
     [slidingVC setResetStrategy:ECPanning|ECTapping];
     [slidingVC setAnchorRightPeekAmount:125.0];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 							

@@ -68,9 +68,10 @@
         //a view to contain the AppWall
         UIView *adHolder = [[UIView alloc] initWithFrame:CGRectMake(0.0, handleView.frame.size.height,
                                                                     self.frame.size.width, self.frame.size.height - handleView.frame.size.height)];
-        [adHolder setBackgroundColor:[UIColor whiteColor]];
+        [adHolder setBackgroundColor:[UIColor colorWithRed:30.0/255.0 green:140.0/255.0 blue:180.0/255.0 alpha:1.0]];
         [adHolder.layer setBorderWidth:2.0];
-        [adHolder.layer setBorderColor:[[UIColor colorWithRed:65.0/255.0 green:65.0/255.0 blue:65.0/255.0 alpha:1.0] CGColor]];
+        //[adHolder.layer setBorderColor:[[UIColor colorWithRed:65.0/255.0 green:65.0/255.0 blue:65.0/255.0 alpha:1.0] CGColor]];
+        [adHolder.layer setBorderColor:[[UIColor colorWithRed:30.0/255.0 green:140.0/255.0 blue:180.0/255.0 alpha:1.0] CGColor]];
         [self addSubview:adHolder];
         
         /*
@@ -85,7 +86,7 @@
                                                                   self.frame.size.height - handleView.frame.size.height)];
 
          [adView.layer setBorderWidth:2.0];
-        [adView.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+        [adView.layer setBorderColor:[[UIColor colorWithRed:30.0/255.0 green:140.0/255.0 blue:180.0/255.0 alpha:1.0] CGColor]];
         [adHolder addSubview:adView];
         
         [appWall presentInView:adView];

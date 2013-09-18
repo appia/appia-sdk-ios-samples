@@ -18,6 +18,7 @@
     UIScrollView *scrollView;
     AIBannerAd *bannerAd;
 }
+
 @end
 
 @implementation APPostViewController
@@ -55,6 +56,8 @@
 {
     [super viewWillAppear:animated];
     
+    NSLog(@"Got a post: %@", [self.post text]);
+    
     CGRect f = postView.frame;
     [postView setFrame:CGRectMake(f.origin.x, f.origin.y, f.size.width, [[self post] heightForPostWithComments])];
     [postView setPost:[self post] withSelectedPhoto:self.selectedPhoto];
@@ -67,8 +70,25 @@
 {
     [super viewDidAppear:animated];
     
-    //show the banner ad
+    //show the banner ad -- hide the status bar since this is a full screen ad
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     [bannerAd presentFromMainWindow];
+    
+    //obtain the banner ad view and add an observer on alpha value so we can know when it has been dismissed
+    UIWindow *mainWindow = [[UIApplication sharedApplication] keyWindow];
+    UIView *bannerView = [[mainWindow subviews] objectAtIndex:1];
+    [bannerView addObserver:self forKeyPath:@"alpha" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    NSNumber *alpha = [change objectForKey:NSKeyValueChangeNewKey];
+    if (alpha.floatValue == 0.0)
+    {
+        //the ad has been hidden (and will be removed from the main window
+        //so reveal the status bar once again
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    }
 }
 
 - (void)didReceiveMemoryWarning

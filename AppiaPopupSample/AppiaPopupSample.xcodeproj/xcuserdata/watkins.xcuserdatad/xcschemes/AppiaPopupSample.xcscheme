@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "41A31BBD17CF9B8100E0887A"
-               BuildableName = "AppiaPopupSample.app"
+               BuildableName = "AppiaPopup.app"
                BlueprintName = "AppiaPopupSample"
                ReferencedContainer = "container:AppiaPopupSample.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "41A31BBD17CF9B8100E0887A"
-            BuildableName = "AppiaPopupSample.app"
+            BuildableName = "AppiaPopup.app"
             BlueprintName = "AppiaPopupSample"
             ReferencedContainer = "container:AppiaPopupSample.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "41A31BBD17CF9B8100E0887A"
-            BuildableName = "AppiaPopupSample.app"
+            BuildableName = "AppiaPopup.app"
             BlueprintName = "AppiaPopupSample"
             ReferencedContainer = "container:AppiaPopupSample.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "41A31BBD17CF9B8100E0887A"
-            BuildableName = "AppiaPopupSample.app"
+            BuildableName = "AppiaPopup.app"
             BlueprintName = "AppiaPopupSample"
             ReferencedContainer = "container:AppiaPopupSample.xcodeproj">
          </BuildableReference>
