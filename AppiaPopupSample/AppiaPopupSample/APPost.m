@@ -24,8 +24,11 @@
 - (CGFloat)heightForPost
 {
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0];
-    CGSize postTextSize = [self.text sizeWithFont:font constrainedToSize:CGSizeMake(290.0, CGFLOAT_MAX)];
-    
+    CGSize postTextSize = [self.text boundingRectWithSize:CGSizeMake(290.0, CGFLOAT_MAX)
+                                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                                  attributes:@{NSFontAttributeName:font}
+                                                     context:[[NSStringDrawingContext alloc] init]].size;
+
     CGFloat photoHeight = ([self.photos count] > 0) ? 290.0 : 0.0;
     
     return 110.0 + postTextSize.height + photoHeight;
@@ -34,8 +37,11 @@
 - (CGFloat)heightForPostWithComments
 {
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0];
-    CGSize postTextSize = [self.text sizeWithFont:font constrainedToSize:CGSizeMake(290.0, CGFLOAT_MAX)];
-    
+    CGSize postTextSize = [self.text boundingRectWithSize:CGSizeMake(290.0, CGFLOAT_MAX)
+                                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                                  attributes:@{NSFontAttributeName:font}
+                                                     context:[[NSStringDrawingContext alloc] init]].size;
+
     CGFloat commentsHeight = 0.0;
     for (APComment *comment in self.comments)
     {

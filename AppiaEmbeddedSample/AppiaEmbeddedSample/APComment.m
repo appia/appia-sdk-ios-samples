@@ -13,7 +13,10 @@
 - (CGFloat)heightForComment
 {
     UIFont *font = [UIFont fontWithName:@"HelveticaNeue-Light" size:13.0];
-    CGSize commentTextSize = [self.text sizeWithFont:font constrainedToSize:CGSizeMake(290.0, CGFLOAT_MAX)];
+    CGSize commentTextSize = [self.text boundingRectWithSize:CGSizeMake(290.0, CGFLOAT_MAX)
+                                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                                  attributes:@{NSFontAttributeName:font}
+                                                     context:[[NSStringDrawingContext alloc] init]].size;
     
     return 42.0 + commentTextSize.height;
 }

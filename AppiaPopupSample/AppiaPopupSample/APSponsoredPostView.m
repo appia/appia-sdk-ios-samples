@@ -53,7 +53,7 @@
 
 - (void)setPost:(APPost *)post
 {
-    APSponsoredPost *sponsoredPost = (APSponsoredPost *)post;
+    //APSponsoredPost *sponsoredPost = (APSponsoredPost *)post;
     
     //set up the ad view
     

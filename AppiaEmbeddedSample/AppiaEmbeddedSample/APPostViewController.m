@@ -42,7 +42,9 @@
     
     [[self view] setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
     
-    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height - 44.0)];
+    scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)];
+    [scrollView setContentInset:UIEdgeInsetsMake(64.0, 0.0, 0.0, 0.0)];
+    [scrollView setScrollIndicatorInsets:UIEdgeInsetsMake(64.0, 0.0, 0.0, 0.0)];
     [scrollView setAlwaysBounceVertical:YES];
     [[self view] addSubview:scrollView];
     

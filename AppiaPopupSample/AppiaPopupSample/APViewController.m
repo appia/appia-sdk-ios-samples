@@ -87,9 +87,11 @@
     initialAppWallView = [[APModalAppWallView alloc] initWithFrame:self.view.frame];
     
     //set nav bar tint color
-    [[[self navigationController] navigationBar] setBarTintColor:[UIColor colorWithRed:32.0/255.0 green:145.0/255.0 blue:188.0/255.0 alpha:1.0]];
+    //[[[self navigationController] navigationBar] setBarTintColor:[UIColor colorWithRed:32.0/255.0 green:145.0/255.0 blue:188.0/255.0 alpha:1.0]];
+    [[[self navigationController] navigationBar] setBarTintColor:[UIColor colorWithRed:0.0/255.0 green:86.0/255.0 blue:122.0/255.0 alpha:1.0]];
     [[[self navigationController] navigationBar] setTintColor:[UIColor whiteColor]];
-    [[[self navigationController] navigationBar] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:14.0/255.0 green:68.0/255.0 blue:89.0/255.0 alpha:1.0]}];
+    //[[[self navigationController] navigationBar] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:14.0/255.0 green:68.0/255.0 blue:89.0/255.0 alpha:1.0]}];
+    [[[self navigationController] navigationBar] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithWhite:1.0 alpha:1.0]}];
 }
 
 - (void)viewWillAppear:(BOOL)animated
