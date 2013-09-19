@@ -78,7 +78,7 @@
     
     //obtain the banner ad view and add an observer on alpha value so we can know when it has been dismissed
     UIWindow *mainWindow = [[UIApplication sharedApplication] keyWindow];
-    UIView *bannerView = [[mainWindow subviews] objectAtIndex:1];
+    UIView *bannerView = [[mainWindow subviews] lastObject];
     [bannerView addObserver:self forKeyPath:@"alpha" options:NSKeyValueObservingOptionNew context:nil];
 }
 
