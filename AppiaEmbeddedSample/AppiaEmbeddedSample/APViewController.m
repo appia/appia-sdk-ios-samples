@@ -218,13 +218,10 @@
         }
         case APPostTypeUtility:
         {
-            //pop up the app wall
-            [appWall presentFromMainWindow];
-            
             [self.postTable deselectRowAtIndexPath:indexPath animated:YES];
 
             //scroll to the top
-            [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+            [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
             
             break;
         }
