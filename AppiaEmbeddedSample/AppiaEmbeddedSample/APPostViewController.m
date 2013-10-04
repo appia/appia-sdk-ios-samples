@@ -67,8 +67,25 @@
 {
     [super viewDidAppear:animated];
     
-    //show the banner ad
+    //show the banner ad -- hide the status bar since this is a full screen ad
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     [bannerAd presentFromMainWindow];
+
+    //obtain the banner ad view and add an observer on alpha value so we can know when it has been dismissed
+    UIWindow *mainWindow = [[UIApplication sharedApplication] keyWindow];
+    UIView *bannerView = [[mainWindow subviews] lastObject];
+    [bannerView addObserver:self forKeyPath:@"alpha" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    NSNumber *alpha = [change objectForKey:NSKeyValueChangeNewKey];
+    if (alpha.floatValue == 0.0)
+    {
+        //the ad has been hidden (and will be removed from the main window
+        //so reveal the status bar once again
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    }
 }
 
 - (void)didReceiveMemoryWarning
