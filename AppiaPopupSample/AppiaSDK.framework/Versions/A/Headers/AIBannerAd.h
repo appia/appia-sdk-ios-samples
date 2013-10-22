@@ -13,6 +13,4 @@
 
 @property(nonatomic, assign) AIBannerAdSize adSize;
 
--(id)initWithSize:(AIBannerAdSize) adSize;
-
 @end

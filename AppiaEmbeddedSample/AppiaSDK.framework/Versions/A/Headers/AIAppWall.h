@@ -11,6 +11,4 @@
 @interface AIAppWall : AIAd
 
 
-- (void)presentInView:(UIView *)view;
-
 @end

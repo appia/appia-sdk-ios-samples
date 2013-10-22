@@ -7,11 +7,20 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+@class AIAdParameters;
 
-@interface AIAd : NSObject 
+@interface AIAd : NSObject
 
+@property (nonatomic,strong) AIAdParameters *adParameters;
+
+- (void)presentInView:(UIView *)view;
 - (void)presentFromMainWindow;
-- (void)dismiss;
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration;
+
+- (void)refresh;
+- (void)dismiss;
+
+- (void)willAppear;
+- (void)didDisappear;
 
 @end

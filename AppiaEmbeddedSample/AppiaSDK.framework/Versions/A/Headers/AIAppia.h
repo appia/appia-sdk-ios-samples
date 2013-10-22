@@ -12,6 +12,8 @@
 @class AIUserDataObject;
 @class AIAppWall;
 @class AIBannerAd;
+@class AIAd;
+@class AIAdParameters;
 #import "AIConstants.h"
 
 @interface AIAppia : NSObject <NSURLConnectionDelegate>
@@ -29,13 +31,18 @@
 -(void) sendUserData:(AIUserDataObject *)data;
 
 
+//request that an ad be cached
+- (void)cacheAd:(AIAd *)ad;
+
 //request that an app wall be cached
 - (void)cacheAppWall;
 
 //create ad objects
 - (AIAppWall *)createAppWall;
+- (AIAppWall *)createAppWallWithParameters:(AIAdParameters *)parameters;
+
 - (AIBannerAd *)createBannerAdWithSize:(AIBannerAdSize)size;
-- (AIBannerAd *)createBannerAd;
+- (AIBannerAd *)createBannerAdWithSize:(AIBannerAdSize)size parameters:(AIAdParameters *)parameters;
 
 // TODO support for generated ids < iOS 6 will change this back to NSUUID
 +(NSString*) advertisingIdentifier;

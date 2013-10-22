@@ -11,5 +11,6 @@
 #import "AIAd.h"
 #import "AIBannerAd.h"
 #import "AIAppWall.h"
+#import "AIAdParameters.h"
 #import "AIUserDataObject.h"
 #import "AIConstants.h"

@@ -114,7 +114,6 @@
     {
         case UIGestureRecognizerStateBegan:
         {
-            NSLog(@"Drag began!");
             dragPoint = [self.layer position];
             break;
         }

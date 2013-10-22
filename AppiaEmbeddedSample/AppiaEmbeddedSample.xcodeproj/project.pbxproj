@@ -52,12 +52,12 @@
 		4137E68817DF69F400C8AF41 /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4137E67517DF69F400C8AF41 /* UIImage+ImageWithUIView.m */; };
 		4137E68917DF69F400C8AF41 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4137E67617DF69F400C8AF41 /* yellow.png */; };
 		4137E68A17DF69F400C8AF41 /* yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4137E67717DF69F400C8AF41 /* yellow@2x.png */; };
-		4137E68F17DF6A6C00C8AF41 /* AppiaSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4137E68D17DF6A6C00C8AF41 /* AppiaSDK.bundle */; };
-		4137E69017DF6A6C00C8AF41 /* AppiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4137E68E17DF6A6C00C8AF41 /* AppiaSDK.framework */; };
 		4137E69217DF6A9700C8AF41 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4137E69117DF6A9700C8AF41 /* QuartzCore.framework */; };
 		4137E69417DF6A9D00C8AF41 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4137E69317DF6A9D00C8AF41 /* AdSupport.framework */; };
 		4137E69617DF6AD700C8AF41 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4137E69517DF6AD700C8AF41 /* MainStoryboard.storyboard */; };
 		4137E69917DF796F00C8AF41 /* APDrawerAppWallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4137E69817DF796E00C8AF41 /* APDrawerAppWallView.m */; };
+		4180DAFE18170EA500D285C9 /* AppiaSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4180DAFC18170EA500D285C9 /* AppiaSDK.bundle */; };
+		4180DAFF18170EA500D285C9 /* AppiaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4180DAFD18170EA500D285C9 /* AppiaSDK.framework */; };
 		4195E49717E21F0D00766AA8 /* APFakeAppWall.m in Sources */ = {isa = PBXBuildFile; fileRef = 4195E49617E21F0D00766AA8 /* APFakeAppWall.m */; };
 		4195E49917E2202300766AA8 /* fake_appwall.html in Resources */ = {isa = PBXBuildFile; fileRef = 4195E49817E2202300766AA8 /* fake_appwall.html */; };
 		41AF82AB17E0B20F001434C4 /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 41AF82A517E0B20F001434C4 /* arrow_down.png */; };
@@ -140,13 +140,13 @@
 		4137E67517DF69F400C8AF41 /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
 		4137E67617DF69F400C8AF41 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		4137E67717DF69F400C8AF41 /* yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow@2x.png"; sourceTree = "<group>"; };
-		4137E68D17DF6A6C00C8AF41 /* AppiaSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppiaSDK.bundle; sourceTree = "<group>"; };
-		4137E68E17DF6A6C00C8AF41 /* AppiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppiaSDK.framework; sourceTree = "<group>"; };
 		4137E69117DF6A9700C8AF41 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4137E69317DF6A9D00C8AF41 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4137E69517DF6AD700C8AF41 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4137E69717DF796E00C8AF41 /* APDrawerAppWallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APDrawerAppWallView.h; sourceTree = "<group>"; };
 		4137E69817DF796E00C8AF41 /* APDrawerAppWallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APDrawerAppWallView.m; sourceTree = "<group>"; };
+		4180DAFC18170EA500D285C9 /* AppiaSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppiaSDK.bundle; sourceTree = "<group>"; };
+		4180DAFD18170EA500D285C9 /* AppiaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppiaSDK.framework; sourceTree = "<group>"; };
 		4195E49517E21F0D00766AA8 /* APFakeAppWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APFakeAppWall.h; sourceTree = "<group>"; };
 		4195E49617E21F0D00766AA8 /* APFakeAppWall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APFakeAppWall.m; sourceTree = "<group>"; };
 		4195E49817E2202300766AA8 /* fake_appwall.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = fake_appwall.html; sourceTree = "<group>"; };
@@ -164,11 +164,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4137E69417DF6A9D00C8AF41 /* AdSupport.framework in Frameworks */,
+				4180DAFF18170EA500D285C9 /* AppiaSDK.framework in Frameworks */,
 				4137E69217DF6A9700C8AF41 /* QuartzCore.framework in Frameworks */,
 				4137E60817DF694800C8AF41 /* UIKit.framework in Frameworks */,
 				4137E60A17DF694800C8AF41 /* Foundation.framework in Frameworks */,
 				4137E60C17DF694800C8AF41 /* CoreGraphics.framework in Frameworks */,
-				4137E69017DF6A6C00C8AF41 /* AppiaSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,8 +178,6 @@
 		4137E5FB17DF694800C8AF41 = {
 			isa = PBXGroup;
 			children = (
-				4137E69317DF6A9D00C8AF41 /* AdSupport.framework */,
-				4137E69117DF6A9700C8AF41 /* QuartzCore.framework */,
 				4137E60D17DF694800C8AF41 /* AppiaEmbeddedSample */,
 				4137E60617DF694800C8AF41 /* Frameworks */,
 				4137E60517DF694800C8AF41 /* Products */,
@@ -197,8 +195,10 @@
 		4137E60617DF694800C8AF41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4137E68D17DF6A6C00C8AF41 /* AppiaSDK.bundle */,
-				4137E68E17DF6A6C00C8AF41 /* AppiaSDK.framework */,
+				4180DAFC18170EA500D285C9 /* AppiaSDK.bundle */,
+				4180DAFD18170EA500D285C9 /* AppiaSDK.framework */,
+				4137E69317DF6A9D00C8AF41 /* AdSupport.framework */,
+				4137E69117DF6A9700C8AF41 /* QuartzCore.framework */,
 				4137E60717DF694800C8AF41 /* UIKit.framework */,
 				4137E60917DF694800C8AF41 /* Foundation.framework */,
 				4137E60B17DF694800C8AF41 /* CoreGraphics.framework */,
@@ -375,6 +375,7 @@
 				4137E63B17DF69BB00C8AF41 /* add_button.png in Resources */,
 				4137E63C17DF69BB00C8AF41 /* add_button@2x.png in Resources */,
 				4137E65C17DF69D200C8AF41 /* blue.png in Resources */,
+				4180DAFE18170EA500D285C9 /* AppiaSDK.bundle in Resources */,
 				4137E65D17DF69D200C8AF41 /* blue@2x.png in Resources */,
 				4137E67C17DF69F400C8AF41 /* green.png in Resources */,
 				4137E67D17DF69F400C8AF41 /* green@2x.png in Resources */,
@@ -390,7 +391,6 @@
 				4137E68717DF69F400C8AF41 /* red@2x.png in Resources */,
 				4137E68917DF69F400C8AF41 /* yellow.png in Resources */,
 				4137E68A17DF69F400C8AF41 /* yellow@2x.png in Resources */,
-				4137E68F17DF6A6C00C8AF41 /* AppiaSDK.bundle in Resources */,
 				4137E69617DF6AD700C8AF41 /* MainStoryboard.storyboard in Resources */,
 				41AF82AB17E0B20F001434C4 /* arrow_down.png in Resources */,
 				41AF82AC17E0B20F001434C4 /* arrow_down@2x.png in Resources */,
@@ -512,7 +512,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Joel Brian Watkins (7VNRE65HS4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					/Users/watkins/work/appia/appiaSampleApps/AppiaEmbeddedSample,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppiaEmbeddedSample/AppiaEmbeddedSample-Prefix.pch";
@@ -530,7 +531,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Appia, Inc (QD9GMJV5NA)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					/Users/watkins/work/appia/appiaSampleApps/AppiaEmbeddedSample,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppiaEmbeddedSample/AppiaEmbeddedSample-Prefix.pch";
